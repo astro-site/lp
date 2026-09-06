@@ -6,10 +6,7 @@
 
 :root {
     --fundo-principal: #050811;
-    --fundo-secundario: #0A0F1E;
-    --fundo-cartao: #0B1021;
-    --cor-principal: #5B42F3;
-    --cor-principal-hover: #4a34c9;
+    --cor-principal: #614BF5;
     --cor-principal-botao: #3443E8;
     --texto-claro: #FFFFFF;
     --texto-suave: #8F9BB3;
@@ -53,6 +50,7 @@ a {
 .links-navegacao {
     display: flex;
     gap: 56px;
+    margin-left: 130px;
 }
 
 .links-navegacao a {
@@ -100,10 +98,6 @@ a {
     font-size: 14px;
     font-weight: 500;
     border: 1px solid var(--cor-principal-botao);
-}
-
-.destaque {
-    color: var(--cor-principal-botao);
 }
 
 .principal {

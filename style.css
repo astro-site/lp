@@ -6,14 +6,12 @@
 
 :root {
     --fundo-principal: #000719;
-    --fundo-secundario: #000719;
-    --fundo-cartao: #000719;
+    --fundo-secundario: #070F25;
     --cor-principal: #614BF5;
-    --cor-principal-hover: #4a34c9;
     --cor-principal-botao: #3443E8;
     --texto-claro: #FFFFFF;
     --texto-suave: #8F9BB3;
-    --cor-borda: #020E35;
+    --cor-borda: #0C153D;
 }
 
 body {
@@ -53,6 +51,7 @@ a {
 .links-navegacao {
     display: flex;
     gap: 56px;
+    margin-left: 130px;
 }
 
 .links-navegacao a {
@@ -194,19 +193,97 @@ a {
 
 .planeta-fundo{
     position: absolute;
-    width: 430px;
-    top: 20px;
-    left: 10px;
-    z-index: 1;
+    width: 800px;
+    height: auto;
+    margin-left: -300px;
 }
+
+/* ESTRELAS */
+
+.estrelas img {
+    position: absolute;
+    width: 800px;
+    height: auto;
+    margin-top: -300px;
+    margin-left: -400px;
+}
+
+.e1 {
+    animation: trocar1 4s ease-in-out infinite;
+}
+
+.e2 {
+    animation: trocar2 4s ease-in-out infinite;
+}
+
+@keyframes trocar1 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes trocar2 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ESTRELAS */
 
 .planeta-frente{
     position: absolute;
-    width: 520px;
-    top: 60px;
+    width: 550px;
+    top: 50px;
     left: 90px;
     z-index: 2;
+    animation: flutuar 4s ease-in-out infinite;
 }
+
+.bolita {
+    position: absolute;
+    width: 40px;
+    top: 325px;
+    left: 150px;
+    z-index: 3;
+    animation: flutuar2 4s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+@keyframes flutuar2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(12px, -40px);
+    }
+}
+
 
 .lua-planeta {
     width: 20px;
@@ -281,6 +358,7 @@ a {
     width: 48px;
     height: 48px;
     background-color: var(--fundo-secundario);
+    border: 2px solid var(--cor-borda);
     border-radius: 12px;
     flex-shrink: 0;
 }
@@ -303,7 +381,7 @@ a {
 
 .interface-recursos {
     flex: 1;
-    background-color: var(--fundo-cartao);
+    background-color: var(--fundo-principal);
     border: 1px solid var(--cor-borda);
     border-radius: 32px;
     display: flex;
