@@ -5,21 +5,21 @@
 }
 
 :root {
-    --bg-main: #000719;
-    --bg-secondary: #000719;
-    --bg-card: #000719;
-    --primary-color: #614BF5;
-    --primary-hover: #4a34c9;
-    --primary-botton: #3443E8;
-    --text-light: #FFFFFF;
-    --text-muted: #8F9BB3;
-    --border-color: #020E35;
+    --fundo-principal: #000719;
+    --fundo-secundario: #000719;
+    --fundo-cartao: #000719;
+    --cor-principal: #614BF5;
+    --cor-principal-hover: #4a34c9;
+    --cor-principal-botao: #3443E8;
+    --texto-claro: #FFFFFF;
+    --texto-suave: #8F9BB3;
+    --cor-borda: #020E35;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: #000719;
-    color: var(--text-light);
+    color: var(--texto-claro);
     line-height: 1.5;
     overflow-x: hidden;
 }
@@ -29,11 +29,11 @@ a {
     color: inherit;
 }
 
-.highlight {
-    color: var(--primary-color);
+.destaque {
+    color: var(--cor-principal);
 }
 
-.navbar {
+.barra-navegacao {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,41 +45,41 @@ a {
     background-color: #000719;
 }
 
-.logo-icon {
+.icone-logo {
     width: 60px;
     height: 60px;
 }
 
-.nav-links {
+.links-navegacao {
     display: flex;
     gap: 56px;
 }
 
-.nav-links a {
+.links-navegacao a {
     font-size: 14px;
-    color: var(--text-light);
+    color: var(--texto-claro);
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--primary-color);
+.links-navegacao a:hover {
+    color: var(--cor-principal);
 }
 
-.nav-actions {
+.acoes-navegacao {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.btn-login {
+.botao-entrar {
     font-size: 14px;
     padding: 10px 28px;
-    border: 1px solid var(--primary-botton);
+    border: 1px solid var(--cor-principal-botao);
     border-radius: 20px;
 }
 
-.btn-primary {
-    background-color: var(--primary-botton);
+.botao-principal {
+    background-color: var(--cor-principal-botao);
     color: white;
     padding: 12px 32px;
     border-radius: 20px;
@@ -88,41 +88,41 @@ a {
     transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
-    background-color: var(--primary-botton);
+.botao-principal:hover {
+    background-color: var(--cor-principal-botao);
 }
 
-.btn-outline {
+.botao-contorno {
     background-color: transparent;
     color: white;
     padding: 12px 32px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
-    border: 1px solid var(--primary-botton);
+    border: 1px solid var(--cor-principal-botao);
 }
 
-.badge {
+.etiqueta {
     display: inline-flex;
     align-items: center;
     gap: 12px;
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--texto-suave);
     margin-bottom: 32px;
 }
 
-.badge.uppercase {
+.etiqueta.maiusculo {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 12px;
 }
 
-.icone-badge {
+.icone-etiqueta {
     width: 20px;
     height: auto;
 }
 
-.hero {
+.principal {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -130,48 +130,48 @@ a {
     position: relative;
 }
 
-.hero-content {
+.conteudo-principal {
     flex: 1;
     max-width: 650px;
 }
 
-.hero h1 {
+.principal h1 {
     font-size: 64px;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 32px;
 }
 
-.hero p {
-    color: var(--text-muted);
+.principal p {
+    color: var(--texto-suave);
     font-size: 18px;
     margin-bottom: 48px;
 }
 
-.hero-buttons {
+.botoes-principal {
     display: flex;
     gap: 20px;
     margin-bottom: 60px;
 }
 
-.hero-features {
+.recursos-principal {
     display: flex;
     gap: 32px;
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--texto-suave);
 }
 
-.icon-check {
+.icone-check {
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-color: var(--primary-botton);
+    background-color: var(--cor-principal-botao);
     border-radius: 50%;
     margin-right: 8px;
     vertical-align: middle;
 }
 
-.hero-graphic {
+.grafico-principal {
     flex: 1;
     position: relative;
     height: 500px;
@@ -180,13 +180,13 @@ a {
     align-items: center;
 }
 
-.planet-container {
+.container-planeta {
     position: relative;
     width: 500px;
     height: 500px;
 }
 
-.hero-graphic{
+.grafico-principal{
     position: relative;
     width: 550px;
     height: 500px;
@@ -208,7 +208,7 @@ a {
     z-index: 2;
 }
 
-.planet-moon {
+.lua-planeta {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -219,19 +219,19 @@ a {
     left: 50px;
 }
 
-.trusted-by {
+.empresas-confianca {
     text-align: center;
     padding: 40px 120px 80px;
 }
 
-.trusted-by p {
+.empresas-confianca p {
     font-size: 12px;
-    color: var(--text-muted);
+    color: var(--texto-suave);
     letter-spacing: 2px;
     margin-bottom: 32px;
 }
 
-.trusted-placeholder {
+.espaco-empresas {
     background-color: #1a1d2d;
     color: #4c5270;
     padding: 20px;
@@ -242,94 +242,94 @@ a {
 }
 
 
-.features {
+.recursos {
     display: flex;
     padding: 80px 120px;
     gap: 120px;
 }
 
-.features-content {
+.conteudo-recursos {
     flex: 1;
     max-width: 500px;
 }
 
-.features h2 {
+.recursos h2 {
     font-size: 40px;
     line-height: 1.2;
     margin-bottom: 24px;
 }
 
-.features-desc {
-    color: var(--text-muted);
+.descricao-recursos {
+    color: var(--texto-suave);
     font-size: 16px;
     margin-bottom: 56px;
 }
 
-.feature-list {
+.lista-recursos {
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-bottom: 56px;
 }
 
-.feature-item {
+.item-recurso {
     display: flex;
     gap: 20px;
 }
 
-.feature-icon-box {
+.caixa-icone-recurso {
     width: 48px;
     height: 48px;
-    background-color: var(--bg-secondary);
+    background-color: var(--fundo-secundario);
     border-radius: 12px;
     flex-shrink: 0;
 }
 
-.feature-text h3 {
+.texto-recurso h3 {
     font-size: 16px;
     margin-bottom: 8px;
 }
 
-.feature-text p {
+.texto-recurso p {
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--texto-suave);
 }
 
-.link-action {
-    color: var(--primary-color);
+.link-acao {
+    color: var(--cor-principal);
     font-size: 16px;
     font-weight: 500;
 }
 
-.features-interface {
+.interface-recursos {
     flex: 1;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+    background-color: var(--fundo-cartao);
+    border: 1px solid var(--cor-borda);
     border-radius: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--text-muted);
+    color: var(--texto-suave);
     font-size: 18px;
     min-height: 600px;
 }
 
-.stats {
+.estatisticas {
     display: flex;
     justify-content: space-between;
     padding: 60px 100px;
-    background-color: var(--bg-secondary);
+    background-color: var(--fundo-secundario);
     border-radius: 32px;
     margin: 40px 120px 120px;
 }
 
-.stat-item {
+.item-estatistica {
     text-align: center;
     position: relative;
 }
 
-.stat-circle {
+.circulo-estatistica {
     width: 56px;
     height: 56px;
     background-color: rgba(91, 66, 243, 0.1);
@@ -337,27 +337,27 @@ a {
     margin: 0 auto 24px;
 }
 
-.stat-item h3 {
+.item-estatistica h3 {
     font-size: 36px;
     margin-bottom: 12px;
 }
 
-.stat-item p {
+.item-estatistica p {
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--texto-suave);
 }
 
-.how-it-works {
+.como-funciona {
     text-align: center;
     padding: 40px 120px 120px;
 }
 
-.how-it-works h2 {
+.como-funciona h2 {
     font-size: 40px;
     margin-bottom: 80px;
 }
 
-.steps-container {
+.container-etapas {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -365,27 +365,27 @@ a {
     margin: 0 auto;
 }
 
-.step-line {
+.linha-etapas {
     position: absolute;
     top: 28px;
     left: 12%;
     right: 12%;
     height: 1px;
-    background-color: var(--border-color);
+    background-color: var(--cor-borda);
     z-index: 1;
 }
 
-.step {
+.etapa {
     position: relative;
     z-index: 2;
     flex: 1;
 }
 
-.step-number {
+.numero-etapa {
     width: 56px;
     height: 56px;
-    background-color: var(--bg-main);
-    border: 1px solid var(--primary-color);
+    background-color: var(--fundo-principal);
+    border: 1px solid var(--cor-principal);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -395,29 +395,29 @@ a {
     font-size: 18px;
 }
 
-.step h3 {
+.etapa h3 {
     font-size: 20px;
     margin-bottom: 16px;
 }
 
-.step p {
+.etapa p {
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--texto-suave);
 }
 
 
-.cta-box{
+.caixa-cta{
     position: relative;
     overflow: hidden;
 }
 
-.cta-image{
+.imagem-cta{
     width: 100%;
     display: block;
     border-radius: 24px;
 }
 
-.cta-button{
+.botao-cta{
     position: absolute;
 
     left: 50%;
@@ -427,43 +427,43 @@ a {
     z-index: 5;
 }
 
-.cta-section {
+.secao-cta {
     padding: 90px;
 }
 
-.planet-icon-small {
+.icone-planeta-pequeno {
     width: 56px;
     height: 56px;
-    border: 3px solid var(--text-light);
+    border: 3px solid var(--texto-claro);
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
 }
 
-.planet-icon-small::after {
+.icone-planeta-pequeno::after {
     content: '';
     position: absolute;
     width: 70px;
     height: 14px;
-    border: 2px solid var(--text-light);
+    border: 2px solid var(--texto-claro);
     border-radius: 50%;
     top: 18px;
     left: -10px;
     transform: rotate(-15deg);
 }
 
-.cta-box h2 {
+.caixa-cta h2 {
     font-size: 40px;
     margin-bottom: 24px;
 }
 
-.cta-box p {
-    color: var(--text-muted);
+.caixa-cta p {
+    color: var(--texto-suave);
     font-size: 18px;
     margin-bottom: 56px;
 }
 
-.cta-glow {
+.brilho-cta {
     position: absolute;
     bottom: -200px;
     left: 50%;
@@ -471,23 +471,23 @@ a {
     width: 90%;
     height: 300px;
     background: radial-gradient(ellipse at top, rgba(91, 66, 243, 0.4), transparent 70%);
-    border-top: 1px solid var(--primary-color);
+    border-top: 1px solid var(--cor-principal);
     border-radius: 50% 50% 0 0;
     pointer-events: none;
 }
 
 footer {
     padding: 80px 120px 32px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--cor-borda);
 }
 
-.footer-content {
+.conteudo-rodape {
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
 }
 
-.footer-brand .logo-text {
+.marca-rodape .texto-logo {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -496,37 +496,37 @@ footer {
     margin-bottom: 24px;
 }
 
-.logo-icon-small {
+.icone-logo-pequeno {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: var(--cor-principal);
 }
 
-.footer-brand p {
+.marca-rodape p {
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--texto-suave);
 }
 
-.footer-links {
+.links-rodape {
     display: flex;
     gap: 120px;
 }
 
-.link-column h4 {
+.coluna-links h4 {
     font-size: 16px;
     margin-bottom: 24px;
 }
 
-.link-column a {
+.coluna-links a {
     display: block;
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--texto-suave);
     margin-bottom: 16px;
 }
 
-.link-column a:hover {
-    color: var(--text-light);
+.coluna-links a:hover {
+    color: var(--texto-claro);
 }
 
 #siga {
@@ -534,12 +534,12 @@ footer {
     height: auto;
 }
 
-.social-icons {
+.icones-sociais {
     display: flex;
     gap: 16px;
 }
 
-.social-icon {
+.icone-social {
     width: 32px;
     height: 32px;
     border-radius: 6px;
@@ -550,42 +550,42 @@ footer {
     font-weight: bold;
 }
 
-.social-icon.insta {
+.icone-social.insta {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
-.social-icon {
+.icone-social {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.social-icon img {
+.icone-social img {
     width: 32px;
     height: 32px;
     object-fit: contain;
     border-radius: 6px;
 }
 
-.footer-bottom {
+.rodape-inferior {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 32px;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--cor-borda);
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--texto-suave);
 }
 
-.footer-legal a {
+.links-legais-rodape a {
     margin-left: 32px;
 }
 
-.footer-legal a:hover {
-    color: var(--text-light);
+.links-legais-rodape a:hover {
+    color: var(--texto-claro);
 }
 
-.footer-logo {
+.logo-rodape {
     width: 160px;
     height: auto;
     margin-bottom: 24px;
