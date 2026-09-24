@@ -9,7 +9,7 @@
     --cor-principal: #614BF5;
     --cor-principal-botao: #3443E8;
     --texto-claro: #FFFFFF;
-    --texto-suave: #8F9BB3;
+    --texto-suave: #D0D0D0;
     --cor-borda: #1A2138;
 }
 
@@ -92,8 +92,8 @@ a {
     background: linear-gradient(
         to right,
         transparent,
-        #3155ff 30%,
-        #3155ff 70%,
+        white 30%,
+        white 70%,
         transparent
     );
 
@@ -119,8 +119,8 @@ a {
     background: linear-gradient(
         to right,
         transparent,
-        #ffffff 30%,
-        #ffffff 70%,
+        var(--cor-principal-botao) 30%,
+        var(--cor-principal-botao) 70%,
         transparent
     );
 
@@ -213,6 +213,7 @@ a {
     color: var(--texto-suave);
     font-size: 18px;
     margin-bottom: 48px;
+    line-height: 2;
 }
 
 .botoes-principal {

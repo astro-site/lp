@@ -92,8 +92,8 @@ a {
     background: linear-gradient(
         to right,
         transparent,
-        #3155ff 30%,
-        #3155ff 70%,
+        white 30%,
+        white 70%,
         transparent
     );
 
@@ -451,7 +451,8 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 60px 100px;
-    background-color: var(--fundo-secundario);
+    background-color: #01091D;
+    border: 3px solid #071035;
     border-radius: 32px;
     margin: 40px 120px 120px;
 }

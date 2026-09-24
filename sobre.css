@@ -92,8 +92,8 @@ a {
     background: linear-gradient(
         to right,
         transparent,
-        #3155ff 30%,
-        #3155ff 70%,
+        white 30%,
+        white 70%,
         transparent
     );
 
@@ -142,8 +142,8 @@ a {
     background: linear-gradient(
         to right,
         transparent,
-        #ffffff 30%,
-        #ffffff 70%,
+        var(--cor-principal-botao) 30%,
+        var(--cor-principal-botao) 70%,
         transparent
     );
 
