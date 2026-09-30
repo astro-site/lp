@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro - Entrar</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="pagina-login">
+    
+    <div class="fundo-planeta" aria-hidden="true"></div>
+
+    <a href="../index.html" onclick="if(document.referrer) {history.back(); return false;}" class="botao-voltar" id="botao-voltar" aria-label="Voltar">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <div class="login-container">
+
+        <section class="login-lado-imagem">
+            <div class="login-lado-conteudo">
+                <div class="login-logo">
+                    <img src="imagens/logotipo.png" alt="Logotipo" class="img-logo">
+                </div>
+
+                <h1 class="login-titulo1">Olá!<br></h1>
+                <h1 class="login-titulo2">Informe seus dados<br>para entrar.</h1>
+                <p class="login-subtitulo">Seu próximo passo para a conformidade está por vir!</p>
+            </div>
+        </section>
+
+        <!-- Lado direito: formulário de login -->
+        <section class="login-lado-formulario">
+            <div class="cartao-login">
+                <h2>Acesse sua conta</h2>
+                <p class="cartao-subtitulo">Acesse sua conta para continuar</p>
+
+                <!-- back-end: método/rota reais de autenticação entram no
+                     "action" e "method" abaixo. Os campos já usam os
+                     mesmos nomes das colunas da tabela "admin"
+                     (email, senha) pra facilitar o bind no back-end. -->
+                <form id="formulario-login" class="formulario-login" action="" method="post">
+
+                    <div class="campos-login">
+                        <div class="campo-formulario">
+                            <label for="email-login">Email</label>
+                            <input
+                                type="email"
+                                id="email-login"
+                                name="email"
+                                placeholder="exemplo@gmail.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="senha-login">Senha</label>
+                            <input
+                                type="password"
+                                id="senha-login"
+                                name="senha"
+                                placeholder="Inserir senha"
+                                autocomplete="current-password"
+                                required
+                            >
+                            
+                            <a href="#" class="link-esqueci-senha" id="link-esqueci-senha">Esqueci minha senha</a>
+                        </div>
+                    </div>
+
+                    <!-- back-end: mostrar aqui a mensagem de erro (ex: "email ou senha
+                         incorretos"), tirando o atributo "hidden" via JavaScript -->
+                    <p class="mensagem-erro" id="mensagem-erro-login" hidden>Email ou senha incorretos.</p>
+
+                    <!-- back-end: ao confirmar o login, redirecionar o admin
+                         para o crud.html (Início do painel) -->
+                    <button type="submit" class="botao-continuar" id="botao-continuar-login">Continuar</button>
+
+                    <p class="texto-criar-conta">
+                        Não tem uma conta?
+                        <a href="#" id="link-criar-workspace">Criar workspace</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="rodape-login">
+        <div class="rodape-topo">
+            <div class="rodape-marca">
+                <div class="login-logo">
+                    <img src="imagens/logotipo.png" alt="Logotipo" class="img-logo">
+                </div>
+                <p>Conformidade em órbita,<br>sempre em vigência.</p>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Produto</h3>
+                <a href="#">Funcionalidades</a>
+                <a href="#">Integrações</a>
+                <a href="#">Segurança</a>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Recursos</h3>
+                <a href="#">Materiais</a>
+                <a href="#">Blog</a>
+                <a href="#">Glossário</a>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Sobre</h3>
+                <a href="#">Quem somos</a>
+                <a href="#">Missão e valores</a>
+                <a href="#">Contato</a>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Siga o astro</h3>
+                <div class="rodape-redes-sociais">
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Mensagem"><i class="fa-regular fa-comment-dots"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 <strong>astro</strong>. Todos os direitos reservados.</p>
+            <div class="rodape-links-legais">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos de uso</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
