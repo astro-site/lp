@@ -24,7 +24,7 @@
             <a href="sobre.html">Sobre</a>
         </nav>
         <div class="acoes-navegacao">
-            <a href="tela_login/login.html" class="botao-entrar">Entrar</a>
+            <a href="#" class="botao-entrar">Entrar</a>
             <a href="#" class="botao-principal">Cadastre-se</a>
         </div>
     </header>
@@ -59,6 +59,13 @@
                     <p>Materiais práticos para <br>sua rotina.</p>
                 </div>
             </div>
+            <div class="imagem-principal">
+                <img class="borrado" src="lp/borrado.png" alt="borrado">
+                <img class="c-arco" src="lp/c-arco.png" alt="c-arco">
+                <img class="c-arco2" src="lp/c-arco2.png" alt="c-arco2">
+                <img class="c-estrelas" src="lp/c-estrelas.gif" alt="c-estrelas">
+                <img class="cometa" src="lp/cometa.gif" alt="cometa">
+            </div>
         </section>
         <hr class="linha">
 
@@ -69,38 +76,55 @@
                 </div>
                 <h1>Guias e ferramentas <br>para o <span class="destaque">seu dia a dia</span></h1>
                 <p>Integrações nativas e via API para <br>um fluxo de dados mais eficiente e <br>sem retrabalho.</p>
-            <a href="#" class="botao-contorno">Explorar materiais &rarr;</a>
+                <a href="#" class="botao-contorno">Explorar materiais &rarr;</a>
             </div>
 
-            <div class="todos-topicos2">
-                <div id="topicos2">
-                    <span></span>
-                    <span></span>
-                    <h4>Guia completo das NRs</h4>
-                    <p>PDF • 4,2 MB</p>
-                    <span></span>
-                </div>
-                <div id="topicos2">
-                    <span></span>
-                    <span></span>
-                    <h4>Guia completo das NRs</h4>
-                    <p>PDF • 4,2 MB</p>
-                    <span></span>
-                </div>
-                <div id="topicos2">
-                    <span></span>
-                    <span></span>
-                    <h4>Guia completo das NRs</h4>
-                    <p>PDF • 4,2 MB</p>
-                    <span></span>
-                </div>
-                <div id="topicos2">
-                    <span></span>
-                    <span></span>
-                    <h4>Guia completo das NRs</h4>
-                    <p>PDF • 4,2 MB</p>
-                    <span></span>
-                </div>
+            <!-- CARD 1 -->
+            <div id="topicos2">
+                <a href="lp/Guia_completo_das_NRs_ASTRO.pdf" target="_blank" rel="noopener noreferrer" style="display: block; width: 100%; height: 200px; margin-bottom: 18px; border-radius: 8px; border: 1px solid #8E00C3; overflow: hidden; background: #0f172a; position: relative;">
+                    <canvas id="pdf-capa-1" style="display: block; width: 100%; height: 100%; object-fit: cover;"></canvas>
+                </a>                    
+                <div class="pdf">PDF</div>
+                <h4>Guia completo das NRs</h4>
+                <h3>Panorama das principais NRs e para que servem na prática.</h3>
+                <p>PDF • 456 KB</p>
+                <span></span>
+            </div>
+            
+            <!-- CARD 2 -->
+            <div id="topicos2">
+                <a href="lp/Qual_NR_se_aplica_a_minha_empresa_ASTRO.pdf" target="_blank" rel="noopener noreferrer" style="display: block; width: 100%; height: 200px; margin-bottom: 18px; border-radius: 8px; border: 1px solid #8E00C3; overflow: hidden; background: #0f172a; position: relative;">
+                    <canvas id="pdf-capa-2" style="display: block; width: 100%; height: 100%; object-fit: cover;"></canvas>
+                </a>                    
+                <div class="pdf">PDF</div>
+                <h4>Qual NR se aplica à minha empresa?</h4>
+                <h3>Entenda como preparar sua empresa.</h3>
+                <p>PDF • 238 KB</p>
+                <span></span>
+            </div>
+
+            <!-- CARD 3 -->
+            <div id="topicos2">
+                <a href="lp/15_erros_que_colocam_sua_empresa_em_risco_ASTRO.pdf" target="_blank" rel="noopener noreferrer" style="display: block; width: 100%; height: 200px; margin-bottom: 18px; border-radius: 8px; border: 1px solid #8E00C3; overflow: hidden; background: #0f172a; position: relative;">
+                    <canvas id="pdf-capa-3" style="display: block; width: 100%; height: 100%; object-fit: cover;"></canvas>
+                </a>                    
+                <div class="pdf">PDF</div>
+                <h4>15 erros que colocam sua empresa em risco</h4>
+                <h3>Saiba os principais erros e como evitá-los.</h3>
+                <p>PDF • 194 KB</p>
+                <span></span>
+            </div>
+
+            <!-- CARD 4 -->
+            <div id="topicos2">
+                <a href="lp/NRs_sem_juridiques_ASTRO.pdf" target="_blank" rel="noopener noreferrer" style="display: block; width: 100%; height: 200px; margin-bottom: 18px; border-radius: 8px; border: 1px solid #8E00C3; overflow: hidden; background: #0f172a; position: relative;">
+                    <canvas id="pdf-capa-4" style="display: block; width: 100%; height: 100%; object-fit: cover;"></canvas>
+                </a>   
+                <div class="pdf">PDF</div>
+                <h4>NRs sem juridiquês</h4>
+                <h3>Explicações diretas para você entender as NRs sem complicação.</h3>
+                <p>PDF • 447 KB</p>
+                <span></span>
             </div>
         </section>
         
@@ -111,7 +135,7 @@
         <section class="blog">
             <div class="conteudo-blog">
                 <div class="etiqueta">
-                    <img src="lp/topico.png" class="icone-etiqueta" alt="Ícone"> MATERIAIS
+                    <img src="lp/topico.png" class="icone-etiqueta" alt="Ícone"> BLOG
                 </div>
                 <h1>Artigos que <span class="destaque">informam, <br>atualizam</span> e inspiram</h1>
                 <p>Informações para entender o <br>presente, acompanhar mudanças e <br>descobrir novas perspectivas.</p>
@@ -120,7 +144,9 @@
 
             <div class="todos-topicos3">
                 <div class="topicos3">
-                    <span></span>
+                    <span>
+                        <img src="" alt="">
+                    </span>
                     <div>
                         <h4>LEGISLAÇÃO</h4>
                     </div>
@@ -129,22 +155,26 @@
                     <h5>12 min de leitura   •   XX/YY/ZZZZ</h5>
                 </div>
                 <div class="topicos3">
-                    <span></span>
+                    <span>
+                        <img src="" alt="">
+                    </span>
                     <div>
                         <h4>GESTÃO</h4>
                     </div>
-                    <h3>Nova NR-1: o que muda na <br>gestão de riscos psicossociais</h3>
-                    <p>Entenda as principais alterações e <br>como sua empresa deve se preparar.</p>
-                    <h5>12 min de leitura   •   XX/YY/ZZZZ</h5>
+                    <h3>Como automatizar o controle de vencimento de NRs e evitar multas</h3>
+                    <p>Descubra estratégias para monitorar reciclagens sem depender de planilhas.</p>
+                    <h5>6 min de leitura   •   XX/YY/ZZZZ</h5>
                 </div>
                 <div class="topicos3">
-                    <span></span>
+                    <span>
+                        <img src="" alt="">
+                    </span>
                     <div>
                         <h4>COMPLIANCE</h4>
                     </div>
-                    <h3>Nova NR-1: o que muda na <br>gestão de riscos psicossociais</h3>
-                    <p>Entenda as principais alterações e <br>como sua empresa deve se preparar.</p>
-                    <h5>12 min de leitura   •   XX/YY/ZZZZ</h5>
+                    <h3>Matriz de Riscos e CBO: garantindo conformidade em fiscalizações</h3>
+                    <p>Veja como mapear as obrigações por cargo e zerar os passivos trabalhistas.</p>
+                    <h5>8 min de leitura   •   XX/YY/ZZZZ</h5>
                 </div>
         </section>
 
@@ -276,7 +306,38 @@
         </div>
     </div>
 </footer>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
+    function carregarCapaPDF(urlPDF, canvasId) {
+        pdfjsLib.getDocument(urlPDF).promise.then(pdf => {
+            return pdf.getPage(1);
+        }).then(page => {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas) return;
+            
+            const context = canvas.getContext('2d');
+            const viewportInicial = page.getViewport({ scale: 1 });
+            const scale = (canvas.parentElement.clientWidth / viewportInicial.width) * 2; 
+            const viewport = page.getViewport({ scale: scale });
+
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            page.render({
+                canvasContext: context,
+                viewport: viewport
+            });
+        }).catch(err => console.error("Erro ao carregar " + urlPDF, err));
+    }
+
+    // Chama a função para renderizar a capa dos 4 arquivos
+    carregarCapaPDF('lp/Guia_completo_das_NRs_ASTRO.pdf', 'pdf-capa-1');
+    carregarCapaPDF('lp/Qual_NR_se_aplica_a_minha_empresa_ASTRO.pdf', 'pdf-capa-2');
+    carregarCapaPDF('lp/15_erros_que_colocam_sua_empresa_em_risco_ASTRO.pdf', 'pdf-capa-3');
+    carregarCapaPDF('lp/NRs_sem_juridiques_ASTRO.pdf', 'pdf-capa-4');
+</script>
 </body>
 </html>
-```

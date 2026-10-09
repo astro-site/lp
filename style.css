@@ -1,3 +1,17 @@
+/* Animação de Entrada (Suave dissolver) */
+body { animation: fadeIn 0.5s ease-in-out forwards; }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animação de Saída */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +42,10 @@ a {
 }
 
 .destaque {
-    color: var(--cor-principal);
+    background: linear-gradient(to right, #5367FF, #AA63F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .barra-navegacao {
@@ -36,17 +53,10 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 30px 80px;
-
     position: sticky;
     top: 0;
     z-index: 1000;
-
-    background: linear-gradient(
-        to bottom,
-        #000719 0%,
-        rgba(0, 7, 25, 0.8) 40%,
-        rgba(0, 7, 25, 0) 100%
-    );
+    background: linear-gradient(to bottom, #000719 0%, rgba(0, 7, 25, 0.8) 40%, rgba(0, 7, 25, 0) 100%);
 }
 
 .icone-logo {
@@ -61,7 +71,6 @@ a {
 }
 
 /* LINKS NAVEGACAO */
-
 .links-navegacao {
     display: flex;
     gap: 56px;
@@ -70,7 +79,6 @@ a {
 
 .links-navegacao a {
     position: relative;
-
     font-size: 14px;
     color: var(--texto-claro);
     transition: color 0.3s ease;
@@ -79,35 +87,20 @@ a {
 .links-navegacao a::after {
     content: "";
     position: absolute;
-
     width: calc(100% + 16px);
     height: 1px;
-
     left: -8px;
     bottom: -12px;
-
     transform: scaleX(0);
     transform-origin: center;
-
-    background: linear-gradient(
-        to right,
-        transparent,
-        white 30%,
-        white 70%,
-        transparent
-    );
-
+    background: linear-gradient(to right, transparent, white 30%, white 70%, transparent);
     box-shadow: 0 0 8px rgba(49, 85, 255, 0.7);
-
     transition: transform 0.5s ease;
 }
 
-.links-navegacao a:hover::after {
-    transform: scaleX(1);
-}
+.links-navegacao a:hover::after { transform: scaleX(1); }
 
 /* LINKS NAVEGACAO */
-
 .acoes-navegacao {
     display: flex;
     align-items: center;
@@ -117,42 +110,87 @@ a {
 .botao-entrar {
     font-size: 14px;
     padding: 10px 28px;
-    border: 1px solid var(--cor-principal-botao);
+    border: 1px solid transparent;
     border-radius: 27px;
+    background-color: #070F25;
+    background-image: linear-gradient(#070F25, #070F25), linear-gradient(to right, #5367FF, #AA63F6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.2);
+    transition:
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+}
+
+.botao-entrar:hover {
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.4);
+    transform: scale(1.03);
 }
 
 .botao-principal {
-    background-color: var(--cor-principal-botao);
+    background: linear-gradient(to right, #3443E8, #614BF5);
     color: white;
     padding: 12px 32px;
     border-radius: 27px;
     font-size: 14px;
     font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.botao-principal2 {
-    background-color: var(--cor-principal-botao);
-    color: white;
-    padding: 12px 32px;
-    border-radius: 27px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background-color 0.3s;
+    transition:
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 }
 
 .botao-principal:hover {
-    background-color: var(--cor-principal-botao);
+    background: linear-gradient(to right, #4855EC, #745FF7);
+    transform: scale(1.03);
 }
 
-.botao-contorno {
-    background-color: transparent;
+.botao-principal2 {
+    background: linear-gradient(to right, #3443E8, #614BF5);
     color: white;
     padding: 12px 32px;
     border-radius: 27px;
     font-size: 14px;
     font-weight: 500;
-    border: 1px solid var(--cor-principal-botao);
+    transition:
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+}
+
+.botao-principal2:hover {
+    background: linear-gradient(to right, #4855EC, #745FF7);
+    transform: scale(1.03);
+}
+
+.botao-contorno {
+    background-color: #070F25;
+    background-image: linear-gradient(#070F25, #070F25), linear-gradient(to right, #5367FF, #AA63F6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 27px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.2);
+    transition:
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+}
+
+.botao-contorno:hover {
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.4);
+    transform: scale(1.03);
 }
 
 .etiqueta {
@@ -190,7 +228,7 @@ a {
 
 .principal h1 {
     font-size: 64px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 32px;
 }
@@ -216,9 +254,9 @@ a {
 
 .icone-check {
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-color: var(--cor-principal-botao);
+    width: 10px;
+    height: 10px;
+    background-color: #AA63F6;
     border-radius: 50%;
     margin-right: 8px;
     vertical-align: middle;
@@ -239,13 +277,13 @@ a {
     height: 500px;
 }
 
-.grafico-principal{
+.grafico-principal {
     position: relative;
     width: 550px;
     height: 500px;
 }
 
-.planeta-fundo{
+.planeta-fundo {
     position: absolute;
     width: 800px;
     height: auto;
@@ -253,7 +291,6 @@ a {
 }
 
 /* ESTRELAS */
-
 .estrelas img {
     position: absolute;
     width: 800px;
@@ -262,45 +299,23 @@ a {
     margin-left: -400px;
 }
 
-.e1 {
-    animation: trocar1 4s ease-in-out infinite;
-}
-
-.e2 {
-    animation: trocar2 4s ease-in-out infinite;
-}
+.e1 { animation: trocar1 4s ease-in-out infinite; }
+.e2 { animation: trocar2 4s ease-in-out infinite; }
 
 @keyframes trocar1 {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @keyframes trocar2 {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 /* ESTRELAS */
-
-.planeta-frente{
+.planeta-frente {
     position: absolute;
     width: 550px;
     top: 50px;
@@ -319,25 +334,14 @@ a {
 }
 
 @keyframes flutuar {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-40px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
 }
 
 @keyframes flutuar2 {
-    0%, 100% {
-        transform: translate(0, 0);
-    }
-
-    50% {
-        transform: translate(12px, -40px);
-    }
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(12px, -40px); }
 }
-
 
 .lua-planeta {
     width: 20px;
@@ -363,19 +367,30 @@ a {
 }
 
 .espaco-empresas {
-    background-color: #1a1d2d;
-    color: #4c5270;
-    padding: 20px;
-    border-radius: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 70px;
+    background: linear-gradient(
+        135deg,
+        rgba(7, 15, 37, 0.72),
+        rgba(1, 9, 29, 0.88)
+    );
+    border: 1px solid rgba(52, 67, 232, 0.28);
+    border-radius: 32px;
+    margin: 40px 50px 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 30px rgba(52, 67, 232, 0.05);
 }
 
+.espaco-empresas img {
+    max-height: 40px;
+    margin: 0 20px;
+    vertical-align: middle;
+}
 
 .recursos {
     display: flex;
-    padding: 80px 120px;
+    padding: 80px 90px;
     gap: 120px;
 }
 
@@ -386,6 +401,7 @@ a {
 
 .recursos h2 {
     font-size: 40px;
+    font-weight: 600;
     line-height: 1.2;
     margin-bottom: 24px;
 }
@@ -428,7 +444,10 @@ a {
 }
 
 .link-acao {
-    color: var(--cor-principal);
+    background: linear-gradient(to right, #5367FF, #AA63F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-size: 16px;
     font-weight: 500;
 }
@@ -451,8 +470,9 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 60px 100px;
-    background-color: #01091D;
-    border: 3px solid #071035;
+    background: rgba(5, 12, 32, 0.72);
+
+    border: 1px solid rgba(52, 67, 232, 0.28);
     border-radius: 32px;
     margin: 40px 120px 120px;
 }
@@ -465,7 +485,11 @@ a {
 .circulo-estatistica {
     width: 56px;
     height: 56px;
-    background-color: rgba(91, 66, 243, 0.1);
+    background: linear-gradient(
+        135deg,
+        rgba(83, 103, 255, 0.12),
+        rgba(170, 99, 246, 0.08)
+    );
     border-radius: 50%;
     margin: 0 auto 24px;
 }
@@ -488,6 +512,7 @@ a {
 
 .como-funciona h2 {
     font-size: 40px;
+    font-weight: 600;
     margin-bottom: 80px;
 }
 
@@ -495,52 +520,60 @@ a {
     display: flex;
     justify-content: space-between;
     position: relative;
-    max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
 }
 
-.linha-etapas {
-    position: absolute;
-    top: 28px;
-    left: 12%;
-    right: 12%;
-    height: 1px;
-    background-color: var(--cor-borda);
-    z-index: 1;
+.etapa {
+    --d: 50px;
+    --g: 20px;
+    position: relative;
+    flex: 1;
+    margin-top: -25px;
 }
 
-.etapa {
-    position: relative;
-    z-index: 2;
-    flex: 1;
+.etapa:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--d) / 2 - 1px);
+    left: calc(50% + var(--d) / 2 + var(--g));
+    right: calc(-50% + var(--d) / 2 + var(--g));
+    height: 2px;
+    border-radius: 2px;
 }
+
+.etapa:nth-child(1)::after { background: linear-gradient(to right, #3443E8, #2431A8); }
+.etapa:nth-child(2)::after { background: linear-gradient(to right, #2431A8, #1A2480); }
+.etapa:nth-child(3)::after { background: linear-gradient(to right, #1A2480, #101858); }
 
 .numero-etapa {
-    width: 56px;
-    height: 56px;
+    width: var(--d);
+    height: var(--d);
     background-color: var(--fundo-principal);
-    border: 1px solid var(--cor-principal);
+    border: 2px solid #2431A8;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 32px;
+    margin: 0 auto 28px;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .etapa h3 {
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 .etapa p {
-    font-size: 14px;
-    color: var(--texto-suave);
+    font-size: 16px;
+    line-height: 2.2;
+    color: #D0D0D0;
 }
 
 /* CTA + FOOTER */
-
 .caixa-cta {
     position: relative;
     overflow: hidden;
@@ -554,22 +587,30 @@ a {
 }
 
 .botao-cta {
-    position: absolute;
     left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
     bottom: 70px;
-    transform: translateX(-50%);
     z-index: 5;
     border-radius: 27px;
+    transition:
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 }
 
-.secao-cta {
-    padding: 90px;
+.botao-cta:hover {
+    background: linear-gradient(to right, #4855EC, #745FF7);
+    transform: translate(-50%, -50%) scale(1.03);
 }
+
+.secao-cta { padding: 90px; }
 
 .icone-planeta-pequeno {
     width: 56px;
     height: 56px;
-    border: 3px solid var(--texto-claro);
+    border: 2px solid var(--texto-claro);
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
@@ -605,19 +646,13 @@ a {
     transform: translateX(-50%);
     width: 90%;
     height: 300px;
-    background: radial-gradient(
-        ellipse at top,
-        rgba(91, 66, 243, 0.4),
-        transparent 70%
-    );
+    background: radial-gradient(ellipse at top, rgba(91, 66, 243, 0.4), transparent 70%);
     border-top: 1px solid var(--cor-principal);
     border-radius: 50% 50% 0 0;
     pointer-events: none;
 }
 
-footer {
-    padding: 80px 120px 32px;
-}
+footer { padding: 80px 120px 32px; }
 
 .conteudo-rodape {
     display: flex;
@@ -663,9 +698,7 @@ footer {
     margin-bottom: 16px;
 }
 
-.coluna-links a:hover {
-    color: var(--texto-claro);
-}
+.coluna-links a:hover { color: var(--texto-claro); }
 
 #siga {
     width: 43px;
@@ -705,13 +738,8 @@ footer {
     color: var(--texto-suave);
 }
 
-.links-legais-rodape a {
-    margin-left: 32px;
-}
-
-.links-legais-rodape a:hover {
-    color: var(--texto-claro);
-}
+.links-legais-rodape a { margin-left: 32px; }
+.links-legais-rodape a:hover { color: var(--texto-claro); }
 
 .logo-rodape {
     width: 160px;

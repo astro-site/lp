@@ -1,3 +1,23 @@
+/* Animação de Entrada (Suave dissolver) */
+body {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de Saída */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +47,10 @@ a {
 }
 
 .destaque {
-    color: var(--cor-principal);
+    background: linear-gradient(to right, #5367FF, #AA63F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .barra-navegacao {
@@ -142,42 +165,94 @@ a {
 .botao-entrar {
     font-size: 14px;
     padding: 10px 28px;
-    border: 1px solid var(--cor-principal-botao);
+    border: 1px solid transparent;
     border-radius: 27px;
+
+    background-color: #070F25;
+    background-image: linear-gradient(#070F25, #070F25), linear-gradient(to right, #5367FF, #AA63F6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.2);
+
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+}
+
+.botao-entrar:hover {
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.4);
+    transform: scale(1.03); 
 }
 
 .botao-principal {
-    background-color: var(--cor-principal-botao);
+    background: linear-gradient(to right, #3443E8, #614BF5);
     color: white;
     padding: 12px 32px;
     border-radius: 27px;
     font-size: 14px;
     font-weight: 500;
     transition: background-color 0.3s;
-}
-
-.botao-principal2 {
-    background-color: var(--cor-principal-botao);
-    color: white;
-    padding: 12px 32px;
-    border-radius: 27px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background-color 0.3s;
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 }
 
 .botao-principal:hover {
-    background-color: var(--cor-principal-botao);
+    background: linear-gradient(to right, #4855EC, #745FF7);
+    transform: scale(1.03); 
 }
 
-.botao-contorno {
-    background-color: transparent;
+.botao-principal2 {
+    background: linear-gradient(to right, #3443E8, #614BF5);
     color: white;
     padding: 12px 32px;
     border-radius: 27px;
     font-size: 14px;
     font-weight: 500;
-    border: 1px solid var(--cor-principal-botao);
+    transition: background-color 0.3s;
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+}
+
+.botao-principal2:hover {
+    background: linear-gradient(to right, #4855EC, #745FF7);
+    transform: scale(1.03); 
+}
+
+.botao-contorno {
+    background-color: #070F25;
+    background-image: linear-gradient(#070F25, #070F25), linear-gradient(to right, #5367FF, #AA63F6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 27px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.2);
+
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+}
+
+.botao-contorno:hover {
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.4);
+    transform: scale(1.03); 
 }
 
 .principal {
@@ -188,12 +263,80 @@ a {
     position: relative;
 }
 
+.imagem-principal img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 53%;
+    height: auto;
+    z-index: -1;
+}
+
+.imagem-principal .mira {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: -260px -40px 0 0;
+    width: 65%;
+    height: auto;
+}
+
+.imagem-principal .arco1 {
+    margin: 10px 50px 0 0;
+    animation: balanco1 5s ease-in-out infinite;
+}
+
+.imagem-principal .arco2 {
+    margin: 60px 60px 0 0;
+    animation: balanco2 6s ease-in-out infinite;
+}
+
+.imagem-principal .isotipo2 {
+    position: absolute;
+    width: 5%;
+    height: auto;
+    margin: 217px 417px 0 0;
+    transform-origin: center bottom;
+    animation: balanco-isotipo-final 4s ease-in-out infinite;
+}
+
+@keyframes balanco1 {
+    0%, 100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes balanco2 {
+    0%, 100% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes balanco-isotipo-final {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
 .etiqueta {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    font-size: 14px;
-    color: var(--texto-suave);
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #8F9BB3;
     margin-bottom: 32px;
 }
 
@@ -204,7 +347,7 @@ a {
 
 .principal h1 {
     font-size: 64px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 32px;
 }
@@ -248,7 +391,7 @@ a {
 
 .funcionalidades h1 {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 32px;
     line-height: 125%;
@@ -273,19 +416,29 @@ a {
     padding: 30px;
     margin: 0;
     background-color: #01091D;
-    border: 3px solid #071035;
-    border-radius: 5%;
+    border: 2px solid var(--cor-borda);
+    border-radius: 15px;
     overflow: hidden;
 }
 
 .topicos > span > span {
-    display: block;
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 70px;
     height: 70px;
     margin: 0 0 20px 0;
-    background-color: #010B25;
+
+    background-color: #040d36;
+    border: 2px solid var(--cor-borda);
+
     border-radius: 50%;
+}
+
+.topicos .bolinha .icon {
+    height: 35px;
+    width: auto;
 }
 
 .topicos h4 {
@@ -298,7 +451,6 @@ a {
     color: white;
     line-height: 1.5;
 }
-
 
 /* INTEGRACOES */
 
@@ -314,7 +466,7 @@ a {
 
 .integracoes h1 {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 32px;
     color: #FFFFFF;
@@ -339,21 +491,29 @@ a {
 }
 
 .topicos2 {
-    margin-top: 100px;
-    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 0 0 20px;
+    gap: 10px;
 }
 
 .topicos2 span {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: #01091D;
+    border: 2px solid #1d2952;
     width: 131px;
-    height: 170px;
+    height: 131px;
     border-style: solid;
-    border-width: 3px;
-    border-color: #071035;
-    border-radius: 5%;
-    padding: 30px;
+    border-width: 2px;
+    border-radius: 15px;
     margin-left: 24px;
+}
+
+.topicos2 span img {
+    width: 60px;
+    height: auto;
 }
 
 /* SEGURANCA */
@@ -367,7 +527,7 @@ a {
 
 .seguranca h1 {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 32px;
     color: #FFFFFF;
@@ -403,13 +563,27 @@ a {
 }
 
 .topicos3 > span > span {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     box-sizing: border-box;
     width: 70px;
     height: 70px;
     margin: 0 0 15px 65px;
-    background-color: #010B25;
+
+    background-color: #030B2A;
+    border: 2px solid var(--cor-borda);
     border-radius: 50%;
+}
+
+.topicos3 .bolinha .icon {
+    height: 35px;
+    width: auto;
+}
+
+.topicos3 .bolinha .icon2 {
+    height: 30px;
 }
 
 .topicos3 h4 {
@@ -448,13 +622,26 @@ a {
 }
 
 .botao-cta {
-    position: absolute;
     left: 50%;
+    transform: translate(-50%, -50%);
+
+    position: absolute;
     bottom: 70px;
-    transform: translateX(-50%);
     z-index: 5;
     border-radius: 27px;
+
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 }
+
+.botao-cta:hover {
+    background: linear-gradient(to right, #4855EC, #745FF7);
+    transform: translate(-50%, -50%) scale(1.03);
+}
+
 
 .secao-cta {
     padding: 90px;
@@ -463,7 +650,7 @@ a {
 .icone-planeta-pequeno {
     width: 56px;
     height: 56px;
-    border: 3px solid var(--texto-claro);
+    border: 2px solid var(--texto-claro);
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
