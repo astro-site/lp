@@ -801,3 +801,353 @@ footer {
     margin-bottom: 24px;
     display: block;
 }
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 1921px) {
+    .principal,
+    .funcionalidades,
+    .integracoes,
+    .seguranca,
+    .secao-cta,
+    footer {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1320px) {
+    .barra-navegacao {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .links-navegacao {
+        gap: 32px;
+        margin-left: 0;
+    }
+
+    .principal,
+    .funcionalidades,
+    .integracoes,
+    .seguranca {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .principal h1 {
+        font-size: clamp(48px, 5vw, 64px);
+    }
+
+    .topicos {
+        justify-content: center;
+    }
+
+    .topicos2 {
+        margin-left: 0;
+    }
+
+    .topicos3 {
+        position: static;
+        flex-wrap: wrap;
+        margin-top: 48px;
+    }
+
+    .seguranca {
+        margin-bottom: 0;
+    }
+
+    footer {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .links-rodape {
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1100px) {
+    .imagem-principal {
+        display: none;
+    }
+
+    .conteudo-integracoes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topicos2 {
+        width: 100%;
+        margin-top: 48px;
+        justify-content: flex-start;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 48px;
+    }
+}
+
+@media (max-width: 800px) {
+    .barra-navegacao {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 16px;
+        row-gap: 20px;
+        padding: 20px clamp(32px, 8vw, 64px);
+    }
+
+    .logo {
+        grid-column: 1;
+    }
+
+    .acoes-navegacao {
+        grid-column: 2;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .links-navegacao {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 4px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .links-navegacao::-webkit-scrollbar {
+        display: none;
+    }
+
+    .principal,
+    .funcionalidades,
+    .integracoes,
+    .seguranca {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .principal {
+        padding-bottom: 56px;
+    }
+
+    .principal h1 {
+        font-size: clamp(36px, 8vw, 50px);
+    }
+
+    .principal h1 br,
+    .principal p br,
+    .integracoes h1 br,
+    .integracoes p br,
+    .seguranca h1 br,
+    .seguranca p br {
+        display: none;
+    }
+
+    .principal p,
+    .integracoes p,
+    .seguranca p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .botoes-principal {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .topicos {
+        gap: 20px;
+    }
+
+    .topicos > span {
+        width: calc((100% - 20px) / 2);
+        height: auto;
+        min-height: 280px;
+    }
+
+    .topicos2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
+        gap: 16px;
+    }
+
+    .topicos2 span {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .topicos3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .topicos3 > span {
+        width: min(100%, 320px);
+        height: auto;
+    }
+
+    .topicos3 > span > span {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .linha-vertical {
+        width: min(100%, 320px);
+        height: 1px;
+        margin: 0;
+        border-left: 0;
+        border-top: 2px solid #191F30;
+    }
+
+    .secao-cta {
+        padding-top: 64px;
+        padding-bottom: 80px;
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .caixa-cta {
+        height: clamp(250px, 42vw, 360px);
+        margin-bottom: 0;
+        border-radius: 24px;
+    }
+
+    .imagem-cta {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .botao-cta {
+        bottom: clamp(20px, 4vw, 36px);
+        white-space: nowrap;
+    }
+
+    footer {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .rodape-inferior {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .links-legais-rodape a:first-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .barra-navegacao {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .botao-entrar,
+    .botao-principal {
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 13px;
+    }
+
+    .principal,
+    .funcionalidades,
+    .integracoes,
+    .seguranca {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .funcionalidades h1,
+    .integracoes h1,
+    .seguranca h1 {
+        font-size: 30px;
+    }
+
+    .botoes-principal {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .botoes-principal a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .topicos > span {
+        width: 100%;
+        min-height: 0;
+    }
+
+    .topicos2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .topicos2 span {
+        height: 112px;
+    }
+
+    .topicos2 span img {
+        width: 52px;
+    }
+
+    .secao-cta {
+        padding: 56px 32px 64px;
+    }
+
+    .caixa-cta {
+        height: 250px;
+    }
+
+    .botao-cta {
+        position: absolute;
+        bottom: 24px;
+        padding: 11px 20px;
+    }
+
+    .botao-cta:hover {
+        transform: translate(-50%, -50%) scale(1.03);
+    }
+
+    footer {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .links-rodape {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 24px;
+    }
+
+    .links-rodape .social {
+        grid-column: 1 / -1;
+    }
+
+    .links-legais-rodape {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .links-legais-rodape a {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .secao-cta {
+        display: none;
+    }
+}
