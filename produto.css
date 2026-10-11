@@ -1069,10 +1069,43 @@ footer {
         padding-right: 32px;
     }
 
+    .principal {
+        padding-bottom: 32px;
+    }
+
+    .funcionalidades,
+    .integracoes,
+    .seguranca {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .linha {
+        width: calc(100% - 64px);
+    }
+
+    .principal + .linha {
+        margin: 0 auto;
+    }
+
+    #funcionalidades + .linha,
+    .integracoes + .linha {
+        margin: -48px auto 0;
+    }
+
+    .links-navegacao {
+        gap: 16px;
+    }
+
+    .principal h1 {
+        font-size: clamp(39px, 10.5vw, 46px);
+    }
+
     .funcionalidades h1,
     .integracoes h1,
     .seguranca h1 {
         font-size: 30px;
+        font-size: 32px;
     }
 
     .botoes-principal {
@@ -1121,6 +1154,7 @@ footer {
     }
 
     footer {
+        padding-top: 48px;
         padding-left: 32px;
         padding-right: 32px;
     }
