@@ -286,3 +286,57 @@ body {
 .data-table tbody tr:last-child {
     border-bottom: none;
 }
+
+@media (max-width: 900px) {
+   
+    .sidebar {
+        width: 80px;
+    }
+
+    .img-logo {
+        width: 40px;
+    }
+
+    .nav-item {
+        justify-content: center;
+        padding: 12px 0;
+        gap: 0;
+        font-size: 0;
+    }
+
+    .nav-item i {
+        font-size: 18px;
+    }
+
+    .main-content {
+        margin-left: 80px;
+        padding: 24px 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 20px 14px;
+    }
+
+    .welcome-banner {
+        padding: 20px;
+    }
+}
