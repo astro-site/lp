@@ -1,3 +1,23 @@
+/* Animação de Entrada (Suave dissolver) */
+body {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animação de Saída */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +47,10 @@ a {
 }
 
 .destaque {
-    color: var(--cor-principal);
+    background: linear-gradient(to right, #5367FF, #AA63F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .barra-navegacao {
@@ -142,42 +165,94 @@ a {
 .botao-entrar {
     font-size: 14px;
     padding: 10px 28px;
-    border: 1px solid var(--cor-principal-botao);
+    border: 1px solid transparent;
     border-radius: 27px;
+
+    background-color: #070F25;
+    background-image: linear-gradient(#070F25, #070F25), linear-gradient(to right, #5367FF, #AA63F6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.2);
+
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+}
+
+.botao-entrar:hover {
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.4);
+    transform: scale(1.03); 
 }
 
 .botao-principal {
-    background-color: var(--cor-principal-botao);
+    background: linear-gradient(to right, #3443E8, #614BF5);
     color: white;
     padding: 12px 32px;
     border-radius: 27px;
     font-size: 14px;
     font-weight: 500;
     transition: background-color 0.3s;
-}
-
-.botao-principal2 {
-    background-color: var(--cor-principal-botao);
-    color: white;
-    padding: 12px 32px;
-    border-radius: 15px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background-color 0.3s;
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 }
 
 .botao-principal:hover {
-    background-color: var(--cor-principal-botao);
+    background: linear-gradient(to right, #4855EC, #745FF7);
+    transform: scale(1.03); 
+}
+
+.botao-principal2 {
+    background: linear-gradient(to right, #3443E8, #614BF5);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 27px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+}
+
+.botao-principal2:hover {
+    background: linear-gradient(to right, #4855EC, #745FF7);
+    transform: scale(1.03); 
 }
 
 .botao-contorno {
-    background-color: transparent;
+    background-color: #070F25;
+    background-image: linear-gradient(#070F25, #070F25), linear-gradient(to right, #5367FF, #AA63F6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
     color: white;
     padding: 12px 32px;
-    border-radius: 15px;
+    border-radius: 27px;
     font-size: 14px;
     font-weight: 500;
-    border: 1px solid var(--cor-principal-botao);
+    border: 1px solid transparent;
+
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.2);
+
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+}
+
+.botao-contorno:hover {
+    box-shadow: 0 0 8px 1px rgba(83, 103, 255, 0.4);
+    transform: scale(1.03); 
 }
 
 .principal {
@@ -188,12 +263,80 @@ a {
     position: relative;
 }
 
+.imagem-principal img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 53%;
+    height: auto;
+    z-index: -1;
+}
+
+.imagem-principal .mira {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: -260px -40px 0 0;
+    width: 65%;
+    height: auto;
+}
+
+.imagem-principal .arco1 {
+    margin: 10px 50px 0 0;
+    animation: balanco1 5s ease-in-out infinite;
+}
+
+.imagem-principal .arco2 {
+    margin: 60px 60px 0 0;
+    animation: balanco2 6s ease-in-out infinite;
+}
+
+.imagem-principal .isotipo2 {
+    position: absolute;
+    width: 5%;
+    height: auto;
+    margin: 217px 417px 0 0;
+    transform-origin: center bottom;
+    animation: balanco-isotipo-final 4s ease-in-out infinite;
+}
+
+@keyframes balanco1 {
+    0%, 100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes balanco2 {
+    0%, 100% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes balanco-isotipo-final {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
 .etiqueta {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    font-size: 14px;
-    color: var(--texto-suave);
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #8F9BB3;
     margin-bottom: 32px;
 }
 
@@ -204,7 +347,7 @@ a {
 
 .principal h1 {
     font-size: 64px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 32px;
 }
@@ -248,7 +391,7 @@ a {
 
 .funcionalidades h1 {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 32px;
     line-height: 125%;
@@ -273,19 +416,29 @@ a {
     padding: 30px;
     margin: 0;
     background-color: #01091D;
-    border: 3px solid #071035;
-    border-radius: 5%;
+    border: 2px solid var(--cor-borda);
+    border-radius: 15px;
     overflow: hidden;
 }
 
 .topicos > span > span {
-    display: block;
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 70px;
     height: 70px;
     margin: 0 0 20px 0;
-    background-color: #010B25;
+
+    background-color: #040d36;
+    border: 2px solid var(--cor-borda);
+
     border-radius: 50%;
+}
+
+.topicos .bolinha .icon {
+    height: 35px;
+    width: auto;
 }
 
 .topicos h4 {
@@ -298,7 +451,6 @@ a {
     color: white;
     line-height: 1.5;
 }
-
 
 /* INTEGRACOES */
 
@@ -314,7 +466,7 @@ a {
 
 .integracoes h1 {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 32px;
     color: #FFFFFF;
@@ -339,21 +491,29 @@ a {
 }
 
 .topicos2 {
-    margin-top: 100px;
-    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 0 0 20px;
+    gap: 10px;
 }
 
 .topicos2 span {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: #01091D;
+    border: 2px solid #1d2952;
     width: 131px;
-    height: 170px;
+    height: 131px;
     border-style: solid;
-    border-width: 3px;
-    border-color: #071035;
-    border-radius: 5%;
-    padding: 30px;
+    border-width: 2px;
+    border-radius: 15px;
     margin-left: 24px;
+}
+
+.topicos2 span img {
+    width: 60px;
+    height: auto;
 }
 
 /* SEGURANCA */
@@ -367,7 +527,7 @@ a {
 
 .seguranca h1 {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.1;
     margin-bottom: 32px;
     color: #FFFFFF;
@@ -403,13 +563,27 @@ a {
 }
 
 .topicos3 > span > span {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     box-sizing: border-box;
     width: 70px;
     height: 70px;
     margin: 0 0 15px 65px;
-    background-color: #010B25;
+
+    background-color: #030B2A;
+    border: 2px solid var(--cor-borda);
     border-radius: 50%;
+}
+
+.topicos3 .bolinha .icon {
+    height: 35px;
+    width: auto;
+}
+
+.topicos3 .bolinha .icon2 {
+    height: 30px;
 }
 
 .topicos3 h4 {
@@ -448,13 +622,26 @@ a {
 }
 
 .botao-cta {
-    position: absolute;
     left: 50%;
+    transform: translate(-50%, -50%);
+
+    position: absolute;
     bottom: 70px;
-    transform: translateX(-50%);
     z-index: 5;
-    border-radius: 15px;
+    border-radius: 27px;
+
+    transition: 
+        transform 0.31s ease,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
 }
+
+.botao-cta:hover {
+    background: linear-gradient(to right, #4855EC, #745FF7);
+    transform: translate(-50%, -50%) scale(1.03);
+}
+
 
 .secao-cta {
     padding: 90px;
@@ -463,7 +650,7 @@ a {
 .icone-planeta-pequeno {
     width: 56px;
     height: 56px;
-    border: 3px solid var(--texto-claro);
+    border: 2px solid var(--texto-claro);
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
@@ -613,4 +800,388 @@ footer {
     height: auto;
     margin-bottom: 24px;
     display: block;
+}
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 1921px) {
+    .principal,
+    .funcionalidades,
+    .integracoes,
+    .seguranca,
+    .secao-cta,
+    footer {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1320px) {
+    .barra-navegacao {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .links-navegacao {
+        gap: 32px;
+        margin-left: 0;
+    }
+
+    .principal,
+    .funcionalidades,
+    .integracoes,
+    .seguranca {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .principal h1 {
+        font-size: clamp(48px, 5vw, 64px);
+    }
+
+    .topicos {
+        justify-content: center;
+    }
+
+    .topicos2 {
+        margin-left: 0;
+    }
+
+    .topicos3 {
+        position: static;
+        flex-wrap: wrap;
+        margin-top: 48px;
+    }
+
+    .seguranca {
+        margin-bottom: 0;
+    }
+
+    footer {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .links-rodape {
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1100px) {
+    .imagem-principal {
+        display: none;
+    }
+
+    .conteudo-integracoes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topicos2 {
+        width: 100%;
+        margin-top: 48px;
+        justify-content: flex-start;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 48px;
+    }
+}
+
+@media (max-width: 800px) {
+    .barra-navegacao {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 16px;
+        row-gap: 20px;
+        padding: 20px clamp(32px, 8vw, 64px);
+    }
+
+    .logo {
+        grid-column: 1;
+    }
+
+    .acoes-navegacao {
+        grid-column: 2;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .links-navegacao {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 4px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .links-navegacao::-webkit-scrollbar {
+        display: none;
+    }
+
+    .principal,
+    .funcionalidades,
+    .integracoes,
+    .seguranca {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .principal {
+        padding-bottom: 56px;
+    }
+
+    .principal h1 {
+        font-size: clamp(36px, 8vw, 50px);
+    }
+
+    .principal h1 br,
+    .principal p br,
+    .integracoes h1 br,
+    .integracoes p br,
+    .seguranca h1 br,
+    .seguranca p br {
+        display: none;
+    }
+
+    .principal p,
+    .integracoes p,
+    .seguranca p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .botoes-principal {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .topicos {
+        gap: 20px;
+    }
+
+    .topicos > span {
+        width: calc((100% - 20px) / 2);
+        height: auto;
+        min-height: 280px;
+    }
+
+    .topicos2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
+        gap: 16px;
+    }
+
+    .topicos2 span {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .topicos3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .topicos3 > span {
+        width: min(100%, 320px);
+        height: auto;
+    }
+
+    .topicos3 > span > span {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .linha-vertical {
+        width: min(100%, 320px);
+        height: 1px;
+        margin: 0;
+        border-left: 0;
+        border-top: 2px solid #191F30;
+    }
+
+    .secao-cta {
+        padding-top: 64px;
+        padding-bottom: 80px;
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .caixa-cta {
+        height: clamp(250px, 42vw, 360px);
+        margin-bottom: 0;
+        border-radius: 24px;
+    }
+
+    .imagem-cta {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .botao-cta {
+        bottom: clamp(20px, 4vw, 36px);
+        white-space: nowrap;
+    }
+
+    footer {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .rodape-inferior {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .links-legais-rodape a:first-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .barra-navegacao {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .botao-entrar,
+    .botao-principal {
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 13px;
+    }
+
+    .principal,
+    .funcionalidades,
+    .integracoes,
+    .seguranca {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .principal {
+        padding-bottom: 32px;
+    }
+
+    .funcionalidades,
+    .integracoes,
+    .seguranca {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .linha {
+        width: calc(100% - 64px);
+    }
+
+    .principal + .linha {
+        margin: 0 auto;
+    }
+
+    #funcionalidades + .linha,
+    .integracoes + .linha {
+        margin: -48px auto 0;
+    }
+
+    .links-navegacao {
+        gap: 16px;
+    }
+
+    .principal h1 {
+        font-size: clamp(39px, 10.5vw, 46px);
+    }
+
+    .funcionalidades h1,
+    .integracoes h1,
+    .seguranca h1 {
+        font-size: 30px;
+        font-size: 32px;
+    }
+
+    .botoes-principal {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .botoes-principal a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .topicos > span {
+        width: 100%;
+        min-height: 0;
+    }
+
+    .topicos2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .topicos2 span {
+        height: 112px;
+    }
+
+    .topicos2 span img {
+        width: 52px;
+    }
+
+    .secao-cta {
+        padding: 56px 32px 64px;
+    }
+
+    .caixa-cta {
+        height: 250px;
+    }
+
+    .botao-cta {
+        position: absolute;
+        bottom: 24px;
+        padding: 11px 20px;
+    }
+
+    .botao-cta:hover {
+        transform: translate(-50%, -50%) scale(1.03);
+    }
+
+    footer {
+        padding-top: 48px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .links-rodape {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 24px;
+    }
+
+    .links-rodape .social {
+        grid-column: 1 / -1;
+    }
+
+    .links-legais-rodape {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .links-legais-rodape a {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .secao-cta {
+        display: none;
+    }
 }
