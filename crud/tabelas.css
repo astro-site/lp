@@ -110,7 +110,7 @@
 .tabela-rolavel {
     max-height: 510px;
     max-width: 1050px;
-    width: 1020px;
+    width: 100%;
     overflow-y: auto;
 }
 
@@ -410,8 +410,6 @@
     background-color: #9011BE;
 }
 
-/* Modal de confirmar exclusão — mais estreito que o padrão (600px),
-   já que só tem uma pergunta e dois botões*/
 .modal-caixa-pequena {
     max-width: 420px;
 }
@@ -437,4 +435,54 @@
 
 .botao-excluir:hover {
     background-color: #c7373c;
+}
+
+@media (max-width: 900px) {
+    .controle-esquerda,
+    .controle-direita {
+        width: 100%;
+    }
+
+    .controle-esquerda .search-bar {
+        width: 100%;
+    }
+
+    .controle-direita {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 580px) {
+    .modal-caixa {
+        padding: 20px;
+    }
+
+    .modal-campo-faixa {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .modal-campo-faixa span {
+        text-align: center;
+    }
+
+    .modal-rodape {
+        flex-direction: column-reverse;
+    }
+
+    .modal-rodape button {
+        width: 100%;
+    }
+
+    .controle-direita {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .controle-direita button,
+    .controle-direita .controle-periodo {
+        width: 100%;
+        justify-content: center;
+    }
 }
