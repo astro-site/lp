@@ -648,11 +648,10 @@ a {
 }
 
 .icone-beneficios {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     flex-shrink: 0;
     border-radius: 50%;
-    background-color: #020E35;
 }
 
 .conteudo-beneficios {
@@ -1226,8 +1225,9 @@ footer {
     }
 
     .icone-beneficios {
-        width: 64px;
-        height: 64px;
+        width: 100px;
+        height: 100px;
+        margin: -10px;
     }
 
     .conteudo-beneficios {
