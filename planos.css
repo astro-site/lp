@@ -1204,7 +1204,7 @@ footer {
     }
 
     .topico {
-        margin-bottom: 12px;
+        margin-bottom: -10px;
     }
 
     .topico p {
@@ -1235,10 +1235,11 @@ footer {
     }
 
     .lista-beneficios {
-        margin-top: 14px;
+        margin-top: 25px;
     }
 
     .beneficio {
+        margin-bottom: 15px;
         font-size: 15px;
     }
 
@@ -1317,16 +1318,17 @@ footer {
     }
 
     .mensal-anual {
-        max-width: 100%;
-        transform: scale(.9);
-        transform-origin: center;
-        margin: -6px 0;
-        width: 100%;
-        max-width: 300px;
-        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        padding-top: 8px;
-        margin: 0;
+        flex-wrap: nowrap;
+
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 12px;
+
+        gap: 8px;
     }
 
     .mensal-anual h4 {
@@ -1334,7 +1336,8 @@ footer {
     }
 
     .switch {
-        margin: 8px 8px 0;
+        margin: 0;
+        flex-shrink: 0;
     }
 
     .economize {
@@ -1358,6 +1361,10 @@ footer {
         border-radius: 22px;
     }
 
+    .o-plano2 {
+        padding-top: 0;
+    }
+
     .mais-escolhido {
         font-size: 12px;
         padding: 5px 14px;
@@ -1365,6 +1372,7 @@ footer {
 
     .plano-titulo,
     .plano-titulo2 {
+        margin: 20px 0 20px 0;
         margin-bottom: 20px;
     }
 
@@ -1498,4 +1506,9 @@ footer {
     .links-legais-rodape a {
         margin-left: 0;
     }
+
+    .economize {
+        display: none;
+    }
+
 }
