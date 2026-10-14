@@ -695,3 +695,719 @@ footer {
     margin-bottom: 24px;
     display: block;
 }
+
+/* RESPONSIVIDADE */
+
+
+@media (min-width: 1921px) {
+
+    .principal,
+    .equipe,
+    .missao,
+    .contato,
+    .secao-cta,
+    footer {
+
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+}
+
+
+@media (max-width: 1320px) {
+
+    .barra-navegacao {
+
+        padding-left: 48px;
+        padding-right: 48px;
+
+    }
+
+
+    .links-navegacao {
+
+        gap: 32px;
+        margin-left: 0;
+
+    }
+
+
+    .principal,
+    .equipe,
+    .missao,
+    .contato {
+
+        padding-left: 48px;
+        padding-right: 48px;
+
+    }
+
+
+    .principal h1 {
+
+        font-size: clamp(48px, 5vw, 64px);
+
+    }
+
+
+    .etiqueta2 {
+
+        margin-left: 48px;
+
+    }
+
+
+    .grupo {
+
+        padding-left: 24px;
+        padding-right: 24px;
+
+    }
+
+
+    .conexao {
+
+        width: 64px;
+
+    }
+
+
+    .integrantes li {
+
+        gap: 12px;
+
+    }
+
+
+    footer {
+
+        padding-left: 64px;
+        padding-right: 64px;
+
+    }
+
+
+    .links-rodape {
+
+        gap: 48px;
+        flex-wrap: wrap;
+
+    }
+
+}
+
+
+@media (max-width: 1100px) {
+
+    .imagem-principal {
+
+        display: none;
+
+    }
+
+
+    .conteudo-principal {
+
+        max-width: 720px;
+
+    }
+
+
+    .equipe {
+
+        flex-direction: column;
+        gap: 0;
+        padding-bottom: 64px;
+
+    }
+
+
+    .grupo {
+
+        width: 100%;
+
+    }
+
+
+    .conexao {
+
+        flex-direction: row;
+        width: 100%;
+        height: 46px;
+
+    }
+
+
+    .conexao .linha-vertical {
+
+        flex: 1;
+        height: 0;
+        border-left: 0;
+        border-top: 2px solid #191F30;
+
+    }
+
+
+    .no-conexao {
+
+        margin: 0 14px;
+        flex-shrink: 0;
+
+    }
+
+
+    .missao,
+    .contato {
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+
+    }
+
+
+    .valores,
+    .canais {
+
+        width: 100%;
+
+    }
+
+
+    .conteudo-rodape {
+
+        flex-direction: column;
+        gap: 48px;
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .barra-navegacao {
+
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 16px;
+        row-gap: 20px;
+        padding: 20px clamp(32px, 8vw, 64px);
+
+    }
+
+
+    .logo {
+
+        grid-column: 1;
+
+    }
+
+
+    .acoes-navegacao {
+
+        grid-column: 2;
+        justify-content: flex-end;
+        gap: 10px;
+
+    }
+
+
+    .links-navegacao {
+
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 4px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+
+    }
+
+
+    .links-navegacao::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+
+    .principal,
+    .equipe,
+    .missao,
+    .contato {
+
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+
+    }
+
+
+    .principal {
+
+        padding-bottom: 56px;
+
+    }
+
+
+    .principal h1 {
+
+        font-size: clamp(36px, 8vw, 50px);
+
+    }
+
+
+    .principal p br,
+    .missao > .conteudo-missao p br,
+    .contato > .conteudo-contato p br {
+
+        display: none;
+
+    }
+
+
+    .principal p,
+    .missao > .conteudo-missao p,
+    .contato > .conteudo-contato p {
+
+        font-size: 16px;
+        line-height: 1.7;
+
+    }
+
+
+    .etiqueta2 {
+
+        margin: 64px 0 0 clamp(32px, 8vw, 64px);
+
+    }
+
+
+    .equipe {
+
+        padding-top: 32px;
+        padding-bottom: 64px;
+
+    }
+
+
+    .grupo {
+
+        padding: 32px;
+
+    }
+
+
+    .grupo-cabecalho h4 {
+
+        font-size: 21px;
+
+    }
+
+
+    .integrantes li {
+
+        gap: 14px;
+
+    }
+
+
+    .integrantes h5 {
+
+        font-size: 15px;
+
+    }
+
+
+    .integrantes p {
+
+        font-size: 13px;
+
+    }
+
+
+    .missao,
+    .contato {
+
+        padding-top: 64px;
+        padding-bottom: 64px;
+        gap: 32px;
+
+    }
+
+
+    .missao h1,
+    .contato h1 {
+
+        font-size: clamp(30px, 8vw, 35px);
+
+    }
+
+
+    .valores,
+    .canais {
+
+        width: 100%;
+
+    }
+
+
+    .secao-cta {
+
+        padding-top: 64px;
+        padding-bottom: 80px;
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+
+    }
+
+
+    .caixa-cta {
+
+        height: clamp(250px, 42vw, 360px);
+        margin-bottom: 0;
+        border-radius: 24px;
+
+    }
+
+
+    .imagem-cta {
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+    }
+
+
+    .botao-cta {
+
+        bottom: clamp(20px, 4vw, 36px);
+        white-space: nowrap;
+
+    }
+
+
+    footer {
+
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+
+    }
+
+
+    .rodape-inferior {
+
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+
+
+    .links-legais-rodape a:first-child {
+
+        margin-left: 0;
+
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .barra-navegacao {
+
+        padding-left: 32px;
+        padding-right: 32px;
+
+    }
+
+
+    .botao-entrar,
+    .botao-principal {
+
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 13px;
+
+    }
+
+
+    .links-navegacao {
+
+        justify-content: space-evenly;
+        gap: 0;
+        overflow-x: visible;
+
+    }
+
+
+    .principal,
+    .equipe,
+    .missao,
+    .contato {
+
+        padding-left: 32px;
+        padding-right: 32px;
+
+    }
+
+
+    .principal {
+
+        padding-top: 40px;
+        padding-bottom: 48px;
+
+    }
+
+
+    .principal h1 {
+
+        font-size: clamp(42px, 11vw, 50px);
+        line-height: 1.05;
+        margin-bottom: 28px;
+
+    }
+
+
+    .etiqueta2 {
+
+        margin: 48px 0 0 32px;
+
+    }
+
+
+    .equipe {
+
+        padding-top: 24px;
+        padding-bottom: 48px;
+
+    }
+
+
+    .grupo {
+
+        padding: 24px 20px 16px;
+        border-radius: 16px;
+
+    }
+
+
+    .grupo-cabecalho {
+
+        padding-bottom: 20px;
+
+    }
+
+
+    .grupo-cabecalho h4 {
+
+        font-size: 19px;
+
+    }
+
+
+    .grupo-cabecalho p {
+
+        font-size: 13px;
+
+    }
+
+
+    .integrantes li {
+
+        display: grid;
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 4px 12px;
+        padding: 16px 0;
+
+    }
+
+
+    .integrantes .numero {
+
+        grid-row: span 2;
+
+    }
+
+
+    .integrantes h5 {
+
+        min-width: 0;
+        font-size: 14px;
+
+    }
+
+
+    .integrantes p {
+
+        grid-column: 2;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+
+    }
+
+
+    .conexao {
+
+        height: 40px;
+
+    }
+
+
+    .no-conexao {
+
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+
+    }
+
+
+    .linha {
+
+        width: calc(100% - 64px);
+        margin: 0 auto;
+
+    }
+
+
+    .missao,
+    .contato {
+
+        padding: 48px 32px;
+        margin-top: 0;
+        gap: 28px;
+
+    }
+
+
+    .missao h1,
+    .contato h1 {
+
+        font-size: clamp(30px, 8vw, 34px);
+        margin-bottom: 24px;
+
+    }
+
+
+    .valor {
+
+        grid-template-columns: 40px minmax(0, 1fr);
+        column-gap: 16px;
+        padding: 24px 20px;
+        margin-bottom: 12px;
+
+    }
+
+
+    .valor .numero {
+
+        font-size: 26px;
+        letter-spacing: 3px;
+
+    }
+
+
+    .valor h4 {
+
+        font-size: 16px;
+
+    }
+
+
+    .valor p {
+
+        font-size: 14px;
+
+    }
+
+
+    .canais {
+
+        gap: 12px;
+
+    }
+
+
+    .canal {
+
+        gap: 16px;
+        padding: 18px 16px;
+
+    }
+
+
+    .canal p {
+
+        font-size: 13px;
+        overflow-wrap: anywhere;
+
+    }
+
+
+    footer {
+
+        padding: 48px 32px 32px;
+
+    }
+
+
+    .conteudo-rodape {
+
+        gap: 40px;
+        margin-bottom: 48px;
+
+    }
+
+
+    .links-rodape {
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 24px;
+
+    }
+
+
+    .links-rodape .social {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    .links-legais-rodape {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+    }
+
+
+    .links-legais-rodape a {
+
+        margin-left: 0;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .secao-cta {
+
+        display: none;
+
+    }
+
+}
