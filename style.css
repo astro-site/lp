@@ -62,12 +62,13 @@ a {
 .icone-logo {
     width: 60px;
     height: 60px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
     transition: transform 0.6s ease;
 }
 
 .icone-logo:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 /* LINKS NAVEGACAO */
@@ -390,13 +391,103 @@ a {
 
 .recursos {
     display: flex;
+    align-items: center;
     padding: 80px 90px;
-    gap: 120px;
+    box-sizing: border-box;
 }
 
 .conteudo-recursos {
-    flex: 1;
+    flex: 0 0 500px;
     max-width: 500px;
+    min-width: 0;
+    margin: 0 -100px 0 0;
+}
+
+/* IMAGEM INTERFACE */
+
+.imagem-interface {
+    position: relative;
+    display: block;
+    flex: 1;
+    min-width: 0;
+    align-self: flex-start;
+    margin: 50px -50px 0 0;
+    line-height: 0;
+}
+
+.imagem-interface .fundo {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.imagem-interface .notebook,
+.imagem-interface .celular {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.imagem-interface .astrinho-voador {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    margin: 370px 0 0 750px;
+}
+
+.imagem-interface .notebook {
+    z-index: 2;
+}
+
+.imagem-interface .celular {
+    z-index: 3;
+}
+
+.imagem-interface .astrinho-voador {
+    z-index: 4;
+}
+
+/* IMAGEM INTERFACE */
+
+/* NOTEBOOK — flutuação suave */
+.imagem-interface .notebook {
+    animation: notebook-flutuar 5s ease-in-out infinite;
+}
+
+@keyframes notebook-flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* CELULAR — movimento contrário */
+.imagem-interface .celular {
+    animation: celular-flutuar 5.5s ease-in-out infinite;
+}
+
+@keyframes celular-flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* ASTRINHO — sobe na diagonal para a direita */
+.imagem-interface .astrinho-voador {
+    animation: astrinho-flutuar 4.5s ease-in-out infinite;
+}
+
+@keyframes astrinho-flutuar {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(35px, -65px);
+    }
 }
 
 .recursos h2 {
@@ -415,8 +506,8 @@ a {
 .lista-recursos {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin-bottom: 56px;
+    gap: 30px;
+    margin: 30px 0 56px 0;
 }
 
 .item-recurso {
@@ -425,12 +516,28 @@ a {
 }
 
 .caixa-icone-recurso {
-    width: 48px;
-    height: 48px;
-    background-color: var(--fundo-secundario);
-    border: 2px solid var(--cor-borda);
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    flex: 0 0 70px;
+
+    border: 2px solid transparent;
     border-radius: 12px;
-    flex-shrink: 0;
+
+    background:
+        linear-gradient(#01091D, #01091D) padding-box,
+        linear-gradient(135deg, #49189E, #0d0932) border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-icone-recurso .icon {
+    height: 30px;
+    width: auto;
 }
 
 .texto-recurso h3 {
@@ -470,11 +577,14 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 60px 100px;
-    background: rgba(5, 12, 32, 0.72);
-
-    border: 1px solid rgba(52, 67, 232, 0.28);
+    border: 2px solid transparent;
     border-radius: 32px;
-    margin: 40px 120px 120px;
+
+    background:
+        linear-gradient(#01091D, #01091D) padding-box,
+        linear-gradient(135deg, #49189E, #0d0932, #49189E) border-box;
+
+    margin: 70px 120px;
 }
 
 .item-estatistica {
@@ -482,16 +592,10 @@ a {
     position: relative;
 }
 
-.circulo-estatistica {
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(
-        135deg,
-        rgba(83, 103, 255, 0.12),
-        rgba(170, 99, 246, 0.08)
-    );
+.icon-estatistica {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin: 0 auto 24px;
 }
 
 .item-estatistica h3 {
@@ -502,6 +606,18 @@ a {
 .item-estatistica p {
     font-size: 14px;
     color: var(--texto-suave);
+}
+
+.dados-demonstrativos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #262C3B;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin: -20px 0 80px 0;
 }
 
 .como-funciona {
@@ -746,4 +862,441 @@ footer { padding: 80px 120px 32px; }
     height: auto;
     margin-bottom: 24px;
     display: block;
+}
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 1921px) {
+    .principal,
+    .empresas-confianca,
+    .recursos,
+    .estatisticas,
+    .como-funciona,
+    .secao-cta,
+    footer {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1320px) {
+    .barra-navegacao {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .links-navegacao {
+        gap: 32px;
+        margin-left: 0;
+    }
+
+    .principal,
+    .recursos {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .empresas-confianca,
+    .como-funciona {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .estatisticas {
+        margin-left: 64px;
+        margin-right: 64px;
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .conteudo-recursos {
+        margin-right: 0;
+    }
+
+    .imagem-interface {
+        margin-right: 0;
+    }
+
+    footer {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .links-rodape {
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1100px) {
+    .grafico-principal {
+        display: none;
+    }
+
+    .principal {
+        padding-bottom: 56px;
+    }
+
+    .conteudo-principal {
+        max-width: 720px;
+    }
+
+    .recursos {
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .conteudo-recursos {
+        flex-basis: 50%;
+    }
+
+    .imagem-interface .astrinho-voador {
+        margin: 52% 0 0 76%;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 48px;
+    }
+}
+
+@media (max-width: 800px) {
+    .barra-navegacao {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 16px;
+        row-gap: 20px;
+        padding: 20px clamp(32px, 8vw, 64px);
+    }
+
+    .logo {
+        grid-column: 1;
+    }
+
+    .acoes-navegacao {
+        grid-column: 2;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .links-navegacao {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 4px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .links-navegacao::-webkit-scrollbar {
+        display: none;
+    }
+
+    .principal,
+    .recursos {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .principal h1 {
+        font-size: clamp(36px, 8vw, 50px);
+    }
+
+    .principal h1 br,
+    .principal p br,
+    .recursos h2 br,
+    .texto-recurso p br,
+    .etapa p br {
+        display: none;
+    }
+
+    .principal p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .botoes-principal {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .recursos {
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .conteudo-recursos {
+        flex-basis: auto;
+        max-width: none;
+        width: 100%;
+    }
+
+    .imagem-interface {
+        width: min(100%, 620px);
+        align-self: center;
+        margin-top: 0;
+    }
+
+    .empresas-confianca {
+        padding: 48px clamp(32px, 8vw, 64px) 64px;
+    }
+
+    .espaco-empresas {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 20px;
+        margin: 32px 0 0;
+        padding: 32px;
+    }
+
+    .espaco-empresas img {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .estatisticas {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 24px;
+        margin: 0 clamp(32px, 8vw, 64px) 40px;
+        padding: 48px 32px;
+    }
+
+    .como-funciona {
+        padding: 48px clamp(32px, 8vw, 64px) 72px;
+        margin-bottom: 0;
+    }
+
+    .como-funciona h2 {
+        margin-bottom: 56px;
+    }
+
+    .container-etapas {
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .etapa {
+        flex: none;
+        margin-top: 0;
+    }
+
+    .etapa:not(:last-child)::after {
+        top: calc(100% + 18px);
+        left: calc(50% - 1px);
+        right: auto;
+        width: 2px;
+        height: 36px;
+    }
+
+    .secao-cta {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    footer {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .rodape-inferior {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .links-legais-rodape a:first-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .barra-navegacao {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .botao-entrar,
+    .botao-principal {
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 13px;
+    }
+
+    .links-navegacao {
+        justify-content: space-evenly;
+        gap: 0;
+        overflow-x: visible;
+    }
+
+    .principal,
+    .recursos {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .principal {
+        padding-top: 40px;
+        padding-bottom: 48px;
+    }
+
+    .principal h1 {
+        font-size: clamp(42px, 11vw, 50px);
+        line-height: 1.05;
+        margin-bottom: 28px;
+    }
+
+    .principal p {
+        margin-bottom: 36px;
+    }
+
+    .botoes-principal {
+        width: 100%;
+        gap: 14px;
+        margin-bottom: 32px;
+    }
+
+    .botoes-principal a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .recursos-principal {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .empresas-confianca {
+        padding: 48px 32px 56px;
+    }
+
+    .empresas-confianca p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    .espaco-empresas {
+        gap: 24px 16px;
+        padding: 28px 20px;
+        border-radius: 24px;
+    }
+
+    .recursos {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .recursos h2,
+    .como-funciona h2 {
+        font-size: clamp(30px, 8vw, 34px);
+    }
+
+    .lista-recursos {
+        gap: 24px;
+        margin: 28px 0 40px;
+    }
+
+    .item-recurso {
+        gap: 16px;
+    }
+
+    .caixa-icone-recurso {
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+        min-height: 58px;
+        flex-basis: 58px;
+    }
+
+    .estatisticas {
+        gap: 32px 16px;
+        margin: 0 32px 40px;
+        padding: 40px 20px;
+        border-radius: 24px;
+    }
+
+    .icon-estatistica {
+        width: 72px;
+        height: 72px;
+    }
+
+    .item-estatistica h3 {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+
+    .item-estatistica p {
+        font-size: 12px;
+    }
+
+    .dados-demonstrativos {
+        margin: -8px 32px 56px;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .como-funciona {
+        padding: 48px 32px 56px;
+    }
+
+    .como-funciona h2 {
+        margin-bottom: 48px;
+    }
+
+    .etapa h3 {
+        font-size: 20px;
+    }
+
+    .etapa p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .secao-cta {
+        display: none;
+    }
+
+    footer {
+        padding: 48px 32px 32px;
+    }
+
+    .conteudo-rodape {
+        gap: 40px;
+        margin-bottom: 48px;
+    }
+
+    .links-rodape {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 24px;
+    }
+
+    .links-rodape .social {
+        grid-column: 1 / -1;
+    }
+
+    .links-legais-rodape {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .links-legais-rodape a {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .imagem-interface {
+        display: none;
+    }
+    
+    .estatisticas {
+        margin-top: 50px;
+    }
 }

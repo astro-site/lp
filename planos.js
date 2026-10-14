@@ -115,3 +115,12 @@ switchPlano.addEventListener("change", function () {
     }, 180);
 
 });
+
+const parametros = new URLSearchParams(window.location.search);
+
+if (parametros.get("periodo") === "anual") {
+    switchPlano.checked = true;
+}
+
+// Executa a atualização inicial dos planos
+switchPlano.dispatchEvent(new Event("change"));

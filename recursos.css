@@ -344,15 +344,13 @@ a {
     gap: 16px;
 }
 
-.topicos span {
+.topicos img {
     display: block;
     box-sizing: border-box;
-    width: 65px;
-    height: 65px;
-    background-color: #030A1E;
-    border: 2px solid #091136;
+    width: 100px;
+    height: 100px;
     border-radius: 20%;
-    margin: 50px 10px 0 0;
+    margin: 50px 5px 0 0;
 }
 
 .topicos h4 {
@@ -618,7 +616,10 @@ a {
 }
 
 .link-acao {
-    color: var(--cor-principal);
+    background: linear-gradient(to right, #5367FF, #AA63F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-size: 16px;
     font-weight: 500;
     margin-top: -10px;
@@ -1012,4 +1013,526 @@ footer {
     height: auto;
     margin-bottom: 24px;
     display: block;
+}
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 1921px) {
+    .principal,
+    .materiais,
+    .blog,
+    .glossario,
+    .secao-cta,
+    footer {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1320px) {
+    .barra-navegacao {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .links-navegacao {
+        gap: 32px;
+        margin-left: 0;
+    }
+
+    .principal,
+    .materiais,
+    .blog,
+    .glossario {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .materiais,
+    .blog,
+    .glossario {
+        flex-wrap: wrap;
+        gap: 28px;
+    }
+
+    .conteudo-materiais,
+    .conteudo-blog,
+    .conteudo-glossario {
+        width: 100%;
+    }
+
+    #topicos2 {
+        width: calc((100% - 28px) / 2);
+        margin-right: 0;
+    }
+
+    .todos-topicos3 {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .glossario .dicionario,
+    .dicionario.glossario-dicionario {
+        width: min(700px, 100%);
+    }
+
+    footer {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .links-rodape {
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1100px) {
+    .imagem-principal {
+        display: none;
+    }
+
+    .principal {
+        padding-bottom: 56px;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 48px;
+    }
+}
+
+@media (max-width: 800px) {
+    .barra-navegacao {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 16px;
+        row-gap: 20px;
+        padding: 20px clamp(32px, 8vw, 64px);
+    }
+
+    .logo {
+        grid-column: 1;
+    }
+
+    .acoes-navegacao {
+        grid-column: 2;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .links-navegacao {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 4px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .links-navegacao::-webkit-scrollbar {
+        display: none;
+    }
+
+    .principal,
+    .materiais,
+    .blog,
+    .glossario {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .principal h1 {
+        font-size: clamp(36px, 8vw, 50px);
+    }
+
+    .principal h1 br,
+    .principal p br,
+    .materiais h1 br,
+    .materiais p br,
+    .blog h1 br,
+    .blog p br,
+    .glossario h1 br,
+    .glossario p br,
+    .topicos p br,
+    .topicos3 h3 br,
+    .topicos3 p br {
+        display: none;
+    }
+
+    .principal p,
+    .materiais p,
+    .blog p,
+    .glossario p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .principal .topicos {
+        width: calc((100% - 24px) / 2);
+        margin-top: 20px;
+    }
+
+    .principal .topicos span,
+    .principal .topicos h4 {
+        margin-top: 0;
+    }
+
+    .principal .topicos span {
+        flex: 0 0 56px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .principal .topicos p {
+        margin-top: 4px;
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .materiais,
+    .blog,
+    .glossario {
+        margin-top: 0;
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    #topicos2 {
+        width: 100%;
+        max-width: 520px;
+        height: 430px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .todos-topicos3 {
+        gap: 24px;
+    }
+
+    .topicos3 {
+        width: min(100%, 360px);
+        height: auto;
+        min-height: 380px;
+    }
+
+    .topicos3 span:first-child,
+    .topicos3 img {
+        display: block;
+        width: 100%;
+    }
+
+    .glossario .dicionario,
+    .dicionario.glossario-dicionario {
+        width: 100%;
+        height: 480px;
+    }
+
+    .sugerir {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sugerir img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .linha,
+    .linha2 {
+        width: calc(100% - clamp(64px, 16vw, 128px));
+    }
+
+    .linha {
+        margin: 0 auto;
+    }
+
+    .materiais + .link-acao,
+    .blog + .link-acao {
+        margin-top: 0;
+    }
+
+    .linha2 {
+        margin: 40px auto 0;
+    }
+
+    .secao-cta {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    footer {
+        padding-left: clamp(32px, 8vw, 64px);
+        padding-right: clamp(32px, 8vw, 64px);
+    }
+
+    .rodape-inferior {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .links-legais-rodape a:first-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .sugerir {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .glossario .dicionario .glossario-dicionario__alfabeto,
+    .dicionario.glossario-dicionario .glossario-dicionario__alfabeto {
+        display: flex !important;
+        grid-template-columns: none !important;
+        flex-wrap: nowrap !important;
+        min-height: 58px !important;
+        padding: 8px 2px !important;
+        gap: 8px !important;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        scrollbar-width: auto;
+        scrollbar-color: #614BF5 #070F25;
+        scroll-snap-type: x proximity;
+    }
+
+    .glossario .dicionario .glossario-dicionario__letra,
+    .dicionario.glossario-dicionario .glossario-dicionario__letra {
+        flex: 0 0 32px !important;
+        width: 32px !important;
+        min-width: 32px;
+        font-size: 15px !important;
+        scroll-snap-align: start;
+    }
+
+    .glossario .dicionario .glossario-dicionario__alfabeto::-webkit-scrollbar,
+    .dicionario.glossario-dicionario .glossario-dicionario__alfabeto::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .glossario .dicionario .glossario-dicionario__alfabeto::-webkit-scrollbar-track,
+    .dicionario.glossario-dicionario .glossario-dicionario__alfabeto::-webkit-scrollbar-track {
+        background: #070F25;
+    }
+
+    .glossario .dicionario .glossario-dicionario__alfabeto::-webkit-scrollbar-thumb,
+    .dicionario.glossario-dicionario .glossario-dicionario__alfabeto::-webkit-scrollbar-thumb {
+        background: #614BF5;
+        border-radius: 99px;
+    }
+}
+
+@media (max-width: 560px) {
+    .barra-navegacao {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .botao-entrar,
+    .botao-principal {
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 13px;
+    }
+
+    .links-navegacao {
+        justify-content: space-evenly;
+        gap: 0;
+        overflow-x: visible;
+    }
+
+    .principal,
+    .materiais,
+    .blog,
+    .glossario {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .principal {
+        padding-top: 40px;
+        padding-bottom: 48px;
+    }
+
+    .principal h1 {
+        font-size: clamp(42px, 11vw, 50px);
+        line-height: 1.05;
+        margin-bottom: 28px;
+    }
+
+    .principal p {
+        margin-bottom: 28px;
+    }
+
+    .principal .topicos {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .principal .topicos span {
+        flex-basis: 52px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .materiais,
+    .blog,
+    .glossario {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .materiais h1,
+    .blog h1,
+    .glossario h1 {
+        font-size: clamp(30px, 8vw, 34px);
+    }
+
+    .materiais p,
+    .blog p,
+    .glossario p {
+        margin-top: 0;
+        margin-bottom: 28px;
+    }
+
+    .botao-contorno {
+        padding: 12px 20px;
+    }
+
+    #topicos2 {
+        height: 410px;
+        padding: 16px;
+    }
+
+    #topicos2 > a {
+        height: 170px !important;
+    }
+
+    #topicos2 p {
+        left: 16px;
+        bottom: 20px;
+    }
+
+    #topicos2 > span:last-child {
+        right: 16px;
+        bottom: 14px;
+    }
+
+    .topicos3 {
+        width: 100%;
+        min-height: 0;
+        padding-bottom: 20px;
+    }
+
+    .topicos3 h5 {
+        margin-top: 22px;
+        margin-bottom: 0;
+    }
+
+    .glossario .dicionario,
+    .dicionario.glossario-dicionario {
+        height: 470px;
+        padding: 18px;
+    }
+
+    .glossario-dicionario__barra-busca {
+        gap: 12px;
+        padding-bottom: 16px;
+    }
+
+    .glossario-dicionario__campo-busca {
+        font-size: 15px;
+    }
+
+    .glossario-dicionario__alfabeto {
+        display: flex;
+        min-height: 68px;
+        padding: 12px 0;
+        gap: 1px;
+        min-height: 72px;
+        padding: 14px 0;
+        gap: 10px;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #614BF5 #070F25;
+    }
+
+    .glossario-dicionario__letra {
+        flex: 0 0 40px;
+        width: 40px;
+        aspect-ratio: 1;
+        font-size: 11px;
+        font-size: 16px;
+    }
+
+    .glossario-dicionario__alfabeto::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .glossario-dicionario__alfabeto::-webkit-scrollbar-track {
+        background: #070F25;
+    }
+
+    .glossario-dicionario__alfabeto::-webkit-scrollbar-thumb {
+        background: #614BF5;
+        border-radius: 99px;
+    }
+
+    .glossario-dicionario__item {
+        height: auto;
+        min-height: 72px;
+        gap: 10px;
+        padding: 12px 4px;
+    }
+
+    .glossario-dicionario__termo {
+        gap: 5px 10px;
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .linha,
+    .linha2 {
+        width: calc(100% - 64px);
+    }
+
+    .secao-cta {
+        display: none;
+    }
+
+    footer {
+        padding: 48px 32px 32px;
+    }
+
+    .conteudo-rodape {
+        gap: 40px;
+        margin-bottom: 48px;
+    }
+
+    .links-rodape {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 24px;
+    }
+
+    .links-rodape .social {
+        grid-column: 1 / -1;
+    }
+
+    .links-legais-rodape {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .links-legais-rodape a {
+        margin-left: 0;
+    }
 }
