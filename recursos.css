@@ -584,7 +584,6 @@ a {
 
 #topicos2 > span:last-child {
     position: absolute;
-
     right: 18px;
     bottom: 18px;
 
@@ -593,10 +592,18 @@ a {
 
     border: 2px solid var(--cor-principal);
     border-radius: 50%;
+
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
+        border-color 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out,
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#topicos2 > span:last-child:hover {
+    cursor: pointer;
+    border-color: var(--cor-principal);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 #topicos2 > span:last-child::after {
@@ -613,20 +620,6 @@ a {
 
     font-size: 18px;
     font-weight: 400;
-}
-
-.link-acao {
-    background: linear-gradient(to right, #5367FF, #AA63F6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: -10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: fit-content;
 }
 
 .linha2 {
