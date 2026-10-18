@@ -303,7 +303,7 @@ footer a {
 }
 
 .coluna-links a:hover {
-    color: var(--texto-claro);
+    color: #ffffff;
 }
 
 #siga {
@@ -339,17 +339,18 @@ footer a {
     justify-content: space-between;
     align-items: center;
     padding-top: 32px;
-    border-top: 1px solid var(--cor-borda);
+    border-top: 1px solid #0C153D;
     font-size: 14px;
     color: #D0D0D0;
 }
 
 .links-legais-rodape a {
     margin-left: 32px;
+    color: #D0D0D0;
 }
 
 .links-legais-rodape a:hover {
-    color: var(--texto-claro);
+    color: #ffffff;
 }
 
 .logo-rodape {

@@ -528,6 +528,12 @@ a {
     margin-bottom: 50px;
 }
 
+.botao-integracoes .botao-contorno {
+    display: block;
+    width: fit-content;
+    padding: 15px 30px;
+}
+
 .topicos2 {
     display: flex;
     flex-wrap: wrap;
