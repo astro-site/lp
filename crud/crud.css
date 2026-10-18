@@ -182,7 +182,7 @@ body {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 12px;
 }
 
@@ -194,6 +194,11 @@ body {
     align-items: center;
     gap: 16px;
     justify-content: center;
+    min-width: 0; /* sem isso, o texto/número de dentro força o card a não encolher */
+}
+
+.stat-card p {
+    min-width: 0;
 }
 
 .stat-card h3 {
@@ -287,10 +292,9 @@ body {
     border-bottom: none;
 }
 
-@media (max-width: 900px) {
-   
+@media (max-width: 1024px) {
     .sidebar {
-        width: 80px;
+        width: 84px;
     }
 
     .img-logo {
@@ -299,27 +303,27 @@ body {
 
     .nav-item {
         justify-content: center;
-        padding: 12px 0;
+        padding: 14px 0;
         gap: 0;
         font-size: 0;
     }
 
     .nav-item i {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .main-content {
-        margin-left: 80px;
+        margin-left: 84px;
         padding: 24px 20px;
     }
 
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .header {
         flex-wrap: wrap;
-        gap: 12px;
+        row-gap: 12px;
     }
 
     .search-bar {
@@ -327,16 +331,132 @@ body {
     }
 }
 
-@media (max-width: 580px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 680px) {
+    .sidebar {
+        width: 64px;
+    }
+
+    .img-logo {
+        width: 32px;
+    }
+
+    .nav-item i {
+        font-size: 17px;
     }
 
     .main-content {
-        padding: 20px 14px;
+        margin-left: 64px;
+        padding: 18px 14px;
+        gap: 14px;
+    }
+
+    .header {
+        margin-bottom: 8px;
+        gap: 10px;
+    }
+
+    .header h1 {
+        font-size: 18px;
     }
 
     .welcome-banner {
-        padding: 20px;
+        padding: 18px 20px;
+    }
+
+    .welcome-banner h2 {
+        font-size: 21px;
+    }
+
+    .welcome-banner p {
+        font-size: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 14px 18px;
+        justify-content: flex-start;
+    }
+
+    .stat-card h3 {
+        font-size: 34px;
+    }
+
+    .stat-card p {
+        font-size: 15px;
+    }
+
+    .panel {
+        padding: 18px 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .sidebar {
+        width: 56px;
+    }
+
+    .img-logo {
+        width: 28px;
+    }
+
+    .nav-item i {
+        font-size: 16px;
+    }
+
+    .main-content {
+        margin-left: 56px;
+        padding: 14px 10px;
+    }
+
+    .stat-card h3 {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .welcome-banner,
+    .stats-grid,
+    .bottom-grid {
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 2200px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .welcome-banner h2 {
+        font-size: 30px;
+    }
+
+    .welcome-banner p {
+        font-size: 19px;
+    }
+
+    .stat-card h3 {
+        font-size: 54px;
+    }
+
+    .stat-card p {
+        font-size: 19px;
+    }
+
+    .panel h2 {
+        font-size: 21px;
+    }
+
+    .data-table th {
+        font-size: 16px;
+    }
+
+    .data-table td {
+        font-size: 15px;
     }
 }
