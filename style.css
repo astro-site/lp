@@ -794,7 +794,7 @@ footer { padding: 80px 120px 32px; }
 
 .marca-rodape p {
     font-size: 14px;
-    color: var(--texto-suave);
+    color: #D0D0D0;
 }
 
 .links-rodape {
@@ -810,7 +810,7 @@ footer { padding: 80px 120px 32px; }
 .coluna-links a {
     display: block;
     font-size: 14px;
-    color: var(--texto-suave);
+    color: #D0D0D0;
     margin-bottom: 16px;
 }
 
@@ -851,7 +851,7 @@ footer { padding: 80px 120px 32px; }
     padding-top: 32px;
     border-top: 1px solid var(--cor-borda);
     font-size: 14px;
-    color: var(--texto-suave);
+    color: #D0D0D0;
 }
 
 .links-legais-rodape a { margin-left: 32px; }

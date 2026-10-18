@@ -48,18 +48,18 @@ body {
 }
 
 .error-button {
-  background-color: #2b4bf2;
-  color: #ffffff;
-  border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 25px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: background 0.2s ease;
+    background-color: #2b4bf2;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s ease;
 }
 
 .error-button:hover {

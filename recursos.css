@@ -403,6 +403,7 @@ a {
 .conteudo-materiais,
 .conteudo-blog,
 .conteudo-glossario {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

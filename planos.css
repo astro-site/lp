@@ -925,7 +925,7 @@ footer {
 
 .marca-rodape p {
     font-size: 14px;
-    color: var(--texto-suave);
+    color: #D0D0D0;
 }
 
 .links-rodape {
@@ -941,7 +941,7 @@ footer {
 .coluna-links a {
     display: block;
     font-size: 14px;
-    color: var(--texto-suave);
+    color: #D0D0D0;
     margin-bottom: 16px;
 }
 
