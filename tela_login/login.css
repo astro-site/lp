@@ -116,21 +116,25 @@ body.pagina-login {
 }
 
 .login-titulo1 {
-    font-size: 60px;
-    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: 0.1px;
 }
 
 .login-titulo2 {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1.25;
-    margin-bottom: 20px;
+    font-size: 42px;
+    line-height: 1.35;
+    font-weight: 500;
 }
 
 .login-subtitulo {
-    font-size: 16px;
-    color: var(--text-muted);
-    max-width: 380px;
+    margin-top: 37px;
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--text-main);
+    max-width: 430px;
 }
 
 .login-lado-formulario {
@@ -371,5 +375,383 @@ footer a {
 
     .rodape-login {
         padding: 40px 32px 24px;
+    }
+}
+
+
+/* ========================================
+   LOGIN — MONITORES MUITO GRANDES
+======================================== */
+
+@media (min-width: 1921px) {
+    .login-container,
+    footer {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* ========================================
+   LOGIN — NOTEBOOKS
+======================================== */
+
+@media (max-width: 1320px) {
+    .login-lado-imagem {
+        padding: 72px 48px;
+    }
+
+    .login-lado-conteudo {
+        max-width: 460px;
+    }
+
+    .login-titulo1 {
+        font-size: 60px;
+    }
+
+    .login-titulo2 {
+        font-size: clamp(34px, 3.15vw, 40px);
+        line-height: 1.3;
+    }
+
+    .login-subtitulo {
+        margin-top: 28px;
+        font-size: 16px;
+    }
+
+    .login-lado-formulario {
+        padding: 32px;
+    }
+
+    .cartao-login {
+        max-width: 450px;
+        margin-left: 0;
+        padding: 36px;
+    }
+
+    footer {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .links-rodape {
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* ========================================
+   LOGIN — TELAS INTERMEDIÁRIAS
+======================================== */
+
+@media (max-width: 1100px) {
+    .login-lado-imagem {
+        padding: 64px 36px;
+    }
+
+    .login-titulo1 {
+        font-size: 58px;
+    }
+
+    .login-titulo2 {
+        font-size: 35px;
+        line-height: 1.3;
+    }
+
+    .login-subtitulo {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .login-lado-formulario {
+        padding: 24px;
+    }
+
+    .cartao-login {
+        max-width: 420px;
+        padding: 32px;
+        height: 560px;
+    }
+
+    .cartao-login h2 {
+        font-size: 29px;
+    }
+
+    .cartao-subtitulo {
+        font-size: 16px;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 48px;
+        margin-bottom: 56px;
+    }
+
+    .links-rodape {
+        gap: 40px;
+    }
+}
+
+
+/* ========================================
+   LOGIN — TABLETS E LAYOUT EMPILHADO
+======================================== */
+
+@media (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .login-lado-imagem {
+        flex: none;
+        width: 100%;
+        padding: 100px 48px 48px;
+        justify-content: center;
+    }
+
+    .login-lado-conteudo {
+        width: 100%;
+        max-width: 680px;
+        margin-top: 0;
+    }
+
+    .login-logo {
+        margin-bottom: 36px;
+    }
+
+    .login-titulo1 {
+        font-size: 64px;
+    }
+
+    .login-titulo2 {
+        font-size: clamp(34px, 5vw, 40px);
+        line-height: 1.3;
+    }
+
+    .login-subtitulo {
+        margin-top: 28px;
+        font-size: 16px;
+    }
+
+    .login-lado-formulario {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+        padding: 0 32px 64px;
+    }
+
+    .cartao-login {
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+        min-height: 560px;
+        margin-left: 0;
+        padding: 36px;
+    }
+
+    footer {
+        padding-left: clamp(32px, 6vw, 64px);
+        padding-right: clamp(32px, 6vw, 64px);
+    }
+
+    .rodape-inferior {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .links-legais-rodape a:first-child {
+        margin-left: 0;
+    }
+}
+
+
+/* ========================================
+   LOGIN — CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+    .login-lado-imagem {
+        padding: 86px 24px 40px;
+    }
+
+    .login-logo {
+        margin-bottom: 30px;
+    }
+
+    .img-logo {
+        width: 170px;
+    }
+
+    .login-titulo1 {
+        font-size: 52px;
+        line-height: 1.15;
+    }
+
+    .login-titulo2 {
+        font-size: clamp(30px, 8vw, 36px);
+        line-height: 1.15;
+    }
+
+    .login-subtitulo {
+        margin-top: 24px;
+        font-size: 15px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    .login-lado-formulario {
+        padding: 0 14px 48px;
+    }
+
+    .cartao-login {
+        width: 100%;
+        min-height: 520px;
+        padding: 32px 22px 28px;
+        border-radius: 24px;
+    }
+
+    .cartao-login h2 {
+        margin-top: 0;
+        font-size: clamp(25px, 6.5vw, 29px);
+        line-height: 1.2;
+    }
+
+    .cartao-subtitulo {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .formulario-login {
+        gap: 18px;
+    }
+
+    .campos-login {
+        gap: 20px;
+    }
+
+    .campo-formulario {
+        gap: 7px;
+    }
+
+    .campo-formulario label {
+        margin-left: 14px;
+        font-size: 14px;
+    }
+
+    .campo-formulario input {
+        height: 52px;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    .link-esqueci-senha {
+        margin-left: 14px;
+        font-size: 13px;
+    }
+
+    .botao-continuar {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .texto-criar-conta {
+        margin-bottom: 8px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    footer {
+        padding: 48px 24px 28px;
+    }
+
+    .conteudo-rodape {
+        gap: 40px;
+        margin-bottom: 48px;
+    }
+
+    .logo-rodape {
+        width: 140px;
+        margin-bottom: 18px;
+    }
+
+    .marca-rodape p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .links-rodape {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 24px;
+    }
+
+    .links-rodape .social {
+        grid-column: 1 / -1;
+    }
+
+    .coluna-links h4 {
+        margin-bottom: 16px;
+        font-size: 15px;
+    }
+
+    .coluna-links a {
+        margin-bottom: 12px;
+        font-size: 13px;
+    }
+
+    .icones-sociais {
+        gap: 12px;
+    }
+
+    .rodape-inferior {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        padding-top: 24px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .links-legais-rodape {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .links-legais-rodape a {
+        margin-left: 0;
+    }
+}
+
+
+/* ========================================
+   LOGIN — CELULARES ESTREITOS
+======================================== */
+
+@media (max-width: 380px) {
+    .login-lado-imagem {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .login-titulo1 {
+        font-size: 48px;
+    }
+
+    .login-titulo2 {
+        font-size: 29px;
+    }
+
+    .cartao-login {
+        padding: 30px 18px 26px;
+    }
+
+    .links-rodape {
+        column-gap: 20px;
     }
 }
