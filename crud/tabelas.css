@@ -109,7 +109,6 @@
 
 .tabela-rolavel {
     max-height: 510px;
-    max-width: 1050px;
     width: 100%;
     overflow-y: auto;
 }
@@ -437,7 +436,7 @@
     background-color: #c7373c;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .controle-esquerda,
     .controle-direita {
         width: 100%;
@@ -449,12 +448,42 @@
 
     .controle-direita {
         justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .barra-controles {
+        padding: 14px 16px;
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 680px) {
+    .cabecalho-pagina .titulo-container h1 {
+        font-size: 18px;
+    }
+
+    .btn-adicionar,
+    .btn-filtrar {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .controle-direita {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .controle-direita .controle-periodo {
+        width: 100%;
+        justify-content: center;
+    }
+
     .modal-caixa {
         padding: 20px;
+        max-height: 85vh;
+    }
+
+    .modal-cabecalho h2 {
+        font-size: 18px;
     }
 
     .modal-campo-faixa {
@@ -475,14 +504,59 @@
         width: 100%;
     }
 
-    .controle-direita {
-        flex-direction: column;
-        align-items: stretch;
+    .rodape-tabela {
+        padding: 12px 4px;
+    }
+}
+
+@media (max-width: 380px) {
+    .modal-caixa {
+        padding: 16px;
     }
 
-    .controle-direita button,
-    .controle-direita .controle-periodo {
-        width: 100%;
-        justify-content: center;
+    .modal-campo input,
+    .modal-campo select {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .cabecalho-pagina h1 {
+        font-size: 28px;
+    }
+
+    .btn-adicionar,
+    .btn-filtrar,
+    .controle-periodo,
+    .controle-mostrar {
+        font-size: 16px;
+    }
+
+    .data-table th {
+        font-size: 16px;
+    }
+
+    .data-table td {
+        font-size: 15px;
+    }
+
+    .btn-editar,
+    .btn-remover {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .modal-cabecalho h2 {
+        font-size: 23px;
+    }
+
+    .modal-campo label {
+        font-size: 15px;
+    }
+
+    .modal-campo input,
+    .modal-campo select {
+        font-size: 16px;
     }
 }
