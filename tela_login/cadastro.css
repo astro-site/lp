@@ -129,21 +129,21 @@ body.pagina-cadastro {
 }
 
 .cadastro-titulo1 {
-    font-size: 64px;
+    font-size: 70px;
     line-height: 1.15;
     font-weight: 500;
     letter-spacing: 0.1px;
 }
 
 .cadastro-titulo2 {
-    font-size: 42px;
+    font-size: 45px;
     line-height: 1.35;
     font-weight: 500;
 }
 
 .cadastro-subtitulo {
     margin-top: 37px;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.4;
     font-weight: 400;
     color: var(--text-main);
@@ -384,8 +384,7 @@ body.pagina-cadastro {
     margin-top: 18px;
 }
 
-.linha-cpf-senha {
-    grid-template-columns: 1fr 1fr;
+.linha-senha {
     margin-top: 18px;
 }
 
