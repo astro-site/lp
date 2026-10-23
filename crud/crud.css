@@ -58,6 +58,17 @@ body {
     width: 140px;
 }
 
+.logo::before {
+    content: "";
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('imagens/logotipo-icone.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .nav-menu {
     display: flex;
     flex-direction: column;
@@ -91,6 +102,7 @@ body {
 }
 
 .nav-item i {
+    display: inline-block;
     width: 20px;
     text-align: center;
 }
@@ -101,7 +113,8 @@ body {
 
 .main-content {
     flex: 1;
-    min-width: 0; /* permite encolher de volta, mesmo com conteúdo largo dentro */
+    min-width: 0;
+    height: 100vh;
     padding: 32px 48px;
     display: flex;
     flex-direction: column;
@@ -194,7 +207,7 @@ body {
     align-items: center;
     gap: 16px;
     justify-content: center;
-    min-width: 0; /* sem isso, o texto/número de dentro força o card a não encolher */
+    min-width: 0;
 }
 
 .stat-card p {
@@ -297,8 +310,20 @@ body {
         width: 84px;
     }
 
-    .img-logo {
+.img-logo {
         width: 40px;
+        display: none;
+    }
+
+    .logo::before {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-menu {
+        padding: 15px 8px;
+        margin-left: 0;
     }
 
     .nav-item {
@@ -306,6 +331,11 @@ body {
         padding: 14px 0;
         gap: 0;
         font-size: 0;
+        letter-spacing: 0;
+    }
+
+    .nav-item.active {
+        margin-right: 0;
     }
 
     .nav-item i {
@@ -336,8 +366,15 @@ body {
         width: 64px;
     }
 
-    .img-logo {
+.img-logo {
         width: 32px;
+        display: none;
+    }
+
+    .logo::before {
+        display: block;
+        width: 32px;
+        height: 32px;
     }
 
     .nav-item i {
@@ -348,6 +385,10 @@ body {
         margin-left: 64px;
         padding: 18px 14px;
         gap: 14px;
+    }
+
+    .sidebar-bottom {
+        margin-top: 24px;
     }
 
     .header {
@@ -399,8 +440,15 @@ body {
         width: 56px;
     }
 
-    .img-logo {
+.img-logo {
         width: 28px;
+        display: none;
+    }
+
+    .logo::before {
+        display: block;
+        width: 28px;
+        height: 28px;
     }
 
     .nav-item i {

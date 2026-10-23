@@ -105,10 +105,15 @@
 .painel-tabela {
     padding: 0;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
 }
 
 .tabela-rolavel {
-    max-height: 510px;
+    flex: 1;
+    min-height: 220px;
     width: 100%;
     overflow-y: auto;
 }
@@ -459,6 +464,31 @@
 @media (max-width: 680px) {
     .cabecalho-pagina .titulo-container h1 {
         font-size: 18px;
+    }
+
+    .data-table th:last-child,
+    .data-table td:last-child {
+        min-width: 90px;
+        width: 90px;
+    }
+
+    .celula-acoes {
+        gap: 6px;
+    }
+
+    .btn-editar,
+    .btn-remover {
+        font-size: 0;
+        padding: 10px;
+        gap: 0;
+        width: 36px;
+        height: 36px;
+        justify-content: center;
+    }
+
+    .btn-editar i,
+    .btn-remover i {
+        font-size: 14px;
     }
 
     .btn-adicionar,
