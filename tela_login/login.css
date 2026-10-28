@@ -403,7 +403,7 @@ footer a {
     }
 
     .login-lado-conteudo {
-        max-width: 460px;
+        display: none;
     }
 
     .login-titulo1 {
@@ -425,6 +425,7 @@ footer a {
     }
 
     .cartao-login {
+        margin-top: -50px;
         max-width: 450px;
         margin-left: 0;
         padding: 36px;
@@ -573,6 +574,10 @@ footer a {
 ======================================== */
 
 @media (max-width: 600px) {
+    .botao-voltar {
+        margin: -10px 0 0 -15px;
+    }
+
     .login-lado-imagem {
         padding: 86px 24px 40px;
     }

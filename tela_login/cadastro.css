@@ -886,10 +886,7 @@ footer a {
     }
 
     .cadastro-lado-imagem {
-        flex: none;
-        width: 100%;
-        min-height: 0;
-        padding: 100px 48px 0;
+        display: none;
     }
 
     .cadastro-lado-conteudo {
@@ -929,6 +926,7 @@ footer a {
     }
 
     .cartao-cadastro {
+        margin-top: 75px;
         width: 100%;
         max-width: 492px;
         height: auto;
