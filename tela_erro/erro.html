@@ -10,6 +10,11 @@
     <title>ERROR – ASTRO</title>
 </head>
 <body class="pagina-erro">
+
+        <a href="../index.html" onclick="if (document.referrer) { history.back(); return false; }" class="botao-voltar" id="botao-voltar" aria-label="Voltar">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
     <div class="conteudo-pagina">
         <img src="imagens/planeta_quebrado.svg" alt="Erro" class="error-img">
         <h1 class="error-h1">Ops... algo deu errado!</h1>
