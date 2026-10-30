@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="898" height="517" viewBox="0 0 898 517" role="img" aria-labelledby="title desc">
+  <title id="title">Planeta roxo e azul fragmentado</title>
+  <desc id="desc">Ilustração vetorial de um planeta partido, atravessado por um anel orbital roxo, com fragmentos flutuando ao redor. Fundo transparente.</desc>
+  <defs>
+    <linearGradient id="grad-orbita" x1="160" y1="185" x2="800" y2="365" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9B00D4"/>
+      <stop offset="0.48" stop-color="#C000F0"/>
+      <stop offset="1" stop-color="#8D00D1"/>
+    </linearGradient>
+    <linearGradient id="grad-lua" x1="82" y1="184" x2="167" y2="184" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6903A5"/>
+      <stop offset="0.28" stop-color="#8600C6"/>
+      <stop offset="0.55" stop-color="#9603DC"/>
+      <stop offset="0.82" stop-color="#9603DC"/>
+      <stop offset="1" stop-color="#8E00CF"/>
+    </linearGradient>
+    <linearGradient id="grad-roxo-superior" x1="345" y1="125" x2="440" y2="255" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6D12D2"/>
+      <stop offset="0.55" stop-color="#7410CE"/>
+      <stop offset="1" stop-color="#4D0CB5"/>
+    </linearGradient>
+    <linearGradient id="grad-roxo-inferior" x1="305" y1="250" x2="535" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8100D0"/>
+      <stop offset="0.42" stop-color="#6500C7"/>
+      <stop offset="1" stop-color="#430BB7"/>
+    </linearGradient>
+    <linearGradient id="grad-roxo-pedra" x1="390" y1="260" x2="535" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7710C1"/>
+      <stop offset="0.5" stop-color="#5C0DB5"/>
+      <stop offset="1" stop-color="#400BAA"/>
+    </linearGradient>
+    <linearGradient id="grad-azul-planeta" x1="430" y1="115" x2="610" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#061E91"/>
+      <stop offset="0.5" stop-color="#061B89"/>
+      <stop offset="1" stop-color="#041777"/>
+    </linearGradient>
+    <linearGradient id="grad-cristal-azul" x1="570" y1="190" x2="715" y2="445" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#171CB4"/>
+      <stop offset="1" stop-color="#2A22AF"/>
+    </linearGradient>
+    <linearGradient id="grad-cristal-roxo" x1="250" y1="110" x2="620" y2="445" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7310CD"/>
+      <stop offset="0.55" stop-color="#5510BF"/>
+      <stop offset="1" stop-color="#3D0AAE"/>
+    </linearGradient>
+  </defs>
+
+  <g id="anel-orbital-esquerdo" aria-label="Anel orbital — trecho esquerdo" fill="url(#grad-orbita)" stroke="none">
+    <path id="anel-orbital-esquerdo-01" data-name="orbita-esquerda" d="M119.0,142.0 L108.0,145.0 L100.0,149.0 L89.0,160.0 L83.0,173.0 L82.0,191.0 L88.0,207.0 L97.0,217.0 L110.0,224.0 L126.0,226.0 L139.0,223.0 L142.0,220.0 L147.0,218.0 L149.0,213.0 L157.0,213.0 L157.0,205.0 L161.0,199.0 L158.0,195.0 L158.0,187.0 L166.0,179.0 L166.0,176.0 L161.0,162.0 L156.0,155.0 L149.0,149.0 L134.0,143.0 Z"/>
+  </g>
+  <g id="anel-orbital-direito" aria-label="Anel orbital — trecho direito" fill="url(#grad-orbita)" stroke="none">
+    <path id="anel-orbital-direito-01" data-name="orbita-direita" d="M626.0,355.0 L644.0,358.0 L708.0,363.0 L759.0,362.0 L784.0,358.0 L792.0,355.0 L799.0,349.0 L800.0,341.0 L793.0,331.0 L769.0,315.0 L724.0,295.0 L699.0,286.0 L695.0,286.0 L696.0,291.0 L702.0,296.0 L701.0,298.0 L695.0,301.0 L732.0,316.0 L754.0,327.0 L760.0,331.0 L767.0,338.0 L767.0,340.0 L752.0,345.0 L709.0,346.0 L632.0,339.0 L631.0,340.0 L633.0,345.0 L627.0,350.0 Z"/>
+  </g>
+  <g id="massa-roxa" aria-label="Partes roxas do planeta" fill="url(#grad-roxo-inferior)" stroke="none">
+    <path id="massa-roxa-01" data-name="hemisferio-roxo-inferior" d="M290.0,267.0 L291.0,274.0 L300.0,277.0 L303.0,280.0 L302.0,282.0 L303.0,292.0 L311.0,321.0 L328.0,354.0 L342.0,372.0 L357.0,387.0 L371.0,398.0 L387.0,408.0 L417.0,420.0 L448.0,426.0 L472.0,426.0 L496.0,422.0 L517.0,416.0 L534.0,408.0 L524.0,402.0 L523.0,371.0 L506.0,351.0 L488.0,349.0 L482.0,341.0 L451.0,334.0 L423.0,350.0 L423.0,352.0 L428.0,355.0 L428.0,369.0 L451.0,386.0 L453.0,404.0 L462.0,412.0 L465.0,420.0 L464.0,424.0 L447.0,404.0 L439.0,384.0 L422.0,371.0 L420.0,365.0 L409.0,354.0 L411.0,348.0 L400.0,315.0 L384.0,310.0 L380.0,307.0 L380.0,302.0 L384.0,296.0 L377.0,282.0 L377.0,274.0 L374.0,270.0 L365.0,263.0 L355.0,260.0 L347.0,249.0 L338.0,246.0 L335.0,243.0 L331.0,243.0 L304.0,255.0 L301.0,259.0 L299.0,258.0 L297.0,259.0 Z"/>
+    <path id="massa-roxa-02" data-name="placa-roxa-superior-esquerda" d="M412.0,124.0 L396.0,132.0 L374.0,148.0 L358.0,164.0 L345.0,183.0 L345.0,186.0 L357.0,198.0 L354.0,213.0 L349.0,217.0 L349.0,220.0 L352.0,224.0 L346.0,232.0 L347.0,236.0 L357.0,245.0 L371.0,244.0 L382.0,255.0 L396.0,262.0 L399.0,262.0 L419.0,249.0 L428.0,259.0 L430.0,259.0 L434.0,255.0 L425.0,241.0 L425.0,222.0 L407.0,213.0 L408.0,201.0 L398.0,188.0 L399.0,167.0 L407.0,145.0 L405.0,142.0 L405.0,138.0 Z"/>
+  </g>
+  <g id="massa-azul" aria-label="Parte azul do planeta" fill="url(#grad-azul-planeta)" stroke="none">
+    <path id="massa-azul-01" data-name="planeta-azul" d="M423.0,119.0 L413.0,124.0 L406.0,138.0 L406.0,142.0 L408.0,145.0 L400.0,167.0 L399.0,188.0 L409.0,201.0 L408.0,213.0 L426.0,222.0 L426.0,241.0 L435.0,254.0 L432.0,258.0 L434.0,265.0 L436.0,266.0 L438.0,264.0 L441.0,264.0 L450.0,283.0 L463.0,289.0 L459.0,307.0 L432.0,333.0 L424.0,349.0 L447.0,335.0 L454.0,333.0 L482.0,340.0 L488.0,348.0 L506.0,350.0 L524.0,371.0 L525.0,402.0 L533.0,406.0 L532.0,403.0 L528.0,404.0 L525.0,402.0 L528.0,401.0 L528.0,397.0 L534.0,394.0 L535.0,392.0 L534.0,380.0 L537.0,375.0 L545.0,384.0 L552.0,382.0 L570.0,369.0 L584.0,355.0 L608.0,350.0 L615.0,337.0 L612.0,337.0 L610.0,335.0 L618.0,328.0 L625.0,308.0 L630.0,283.0 L630.0,252.0 L627.0,233.0 L622.0,215.0 L609.0,187.0 L593.0,165.0 L570.0,143.0 L543.0,126.0 L517.0,116.0 L491.0,111.0 L458.0,111.0 L436.0,115.0 Z"/>
+  </g>
+  <g id="placas-centrais" aria-label="Placas centrais do planeta" fill="url(#grad-roxo-pedra)" stroke="none">
+    <path id="placas-centrais-01" data-name="fragmento-central" d="M441.0,265.0 L438.0,265.0 L426.0,274.0 L411.0,276.0 L394.0,281.0 L394.0,305.0 L406.0,308.0 L408.0,310.0 L418.0,339.0 L433.0,332.0 L458.0,307.0 L462.0,289.0 L449.0,283.0 Z"/>
+    <path id="placas-centrais-02" data-name="fragmento-central" d="M461.0,323.0 L465.0,325.0 L474.0,326.0 L510.0,335.0 L582.0,349.0 L587.0,349.0 L581.0,342.0 L583.0,340.0 L591.0,338.0 L587.0,332.0 L514.0,319.0 L470.0,308.0 L469.0,313.0 L465.0,316.0 L464.0,320.0 Z"/>
+    <path id="placas-centrais-03" data-name="fragmento-central-pequeno" d="M294.0,233.0 L294.0,239.0 L299.0,243.0 L306.0,243.0 L310.0,241.0 L312.0,238.0 L312.0,234.0 L306.0,230.0 L299.0,230.0 Z"/>
+  </g>
+  <g id="fragmentos-azuis" aria-label="Fragmentos azuis" fill="url(#grad-cristal-azul)" stroke="none">
+    <path id="fragmentos-azuis-01" data-name="fragmento-azul-superior-direito" d="M713.0,193.0 L689.0,193.0 L676.0,200.0 L671.0,210.0 L671.0,213.0 L690.0,220.0 L697.0,220.0 L714.0,205.0 L715.0,201.0 Z"/>
+    <path id="fragmentos-azuis-02" data-name="fragmento-azul-inferior-direito" d="M583.0,395.0 L574.0,414.0 L574.0,419.0 L598.0,442.0 L604.0,446.0 L608.0,446.0 L601.0,424.0 L590.0,411.0 Z"/>
+    <path id="fragmentos-azuis-03" data-name="fragmento-azul-inferior" d="M425.0,372.0 L440.0,384.0 L448.0,404.0 L464.0,423.0 L461.0,412.0 L452.0,404.0 L450.0,386.0 L430.0,371.0 Z"/>
+    <path id="fragmentos-azuis-04" data-name="detalhe-azul" d="M648.0,232.0 L645.0,235.0 L645.0,238.0 L648.0,242.0 L652.0,242.0 L653.0,235.0 L652.0,233.0 Z"/>
+  </g>
+  <g id="fragmentos-roxos" aria-label="Fragmentos roxos" fill="url(#grad-cristal-roxo)" stroke="none">
+    <path id="fragmentos-roxos-01" data-name="fragmento-solto" d="M169.0,194.0 L170.0,202.0 L164.0,206.0 L167.0,212.0 L176.0,221.0 L196.0,234.0 L217.0,245.0 L261.0,264.0 L275.0,268.0 L276.0,265.0 L272.0,259.0 L282.0,253.0 L281.0,251.0 L258.0,243.0 L224.0,227.0 L209.0,217.0 L205.0,213.0 L204.0,208.0 L212.0,203.0 L225.0,201.0 L247.0,201.0 L292.0,206.0 L294.0,205.0 L294.0,198.0 L297.0,195.0 L296.0,193.0 L238.0,186.0 L198.0,186.0 L180.0,189.0 Z"/>
+    <path id="fragmentos-roxos-02" data-name="fragmento-solto" d="M254.0,297.0 L229.0,295.0 L220.0,296.0 L193.0,319.0 L193.0,324.0 L215.0,349.0 L217.0,349.0 L229.0,342.0 L255.0,312.0 Z"/>
+    <path id="fragmentos-roxos-03" data-name="fragmento-solto" d="M272.0,114.0 L269.0,116.0 L263.0,125.0 L262.0,131.0 L271.0,150.0 L274.0,160.0 L291.0,161.0 L303.0,150.0 L303.0,146.0 L285.0,116.0 L281.0,114.0 Z"/>
+    <path id="fragmentos-roxos-04" data-name="fragmento-solto" d="M279.0,349.0 L273.0,360.0 L273.0,364.0 L298.0,386.0 L301.0,385.0 L311.0,373.0 L311.0,369.0 L302.0,353.0 L298.0,348.0 L286.0,347.0 Z"/>
+    <path id="fragmentos-roxos-05" data-name="fragmento-solto" d="M309.0,178.0 L304.0,194.0 L303.0,203.0 L307.0,211.0 L312.0,217.0 L317.0,219.0 L326.0,219.0 L332.0,213.0 L337.0,202.0 L315.0,178.0 Z"/>
+    <path id="fragmentos-roxos-06" data-name="particula" d="M585.0,394.0 L584.0,396.0 L588.0,402.0 L591.0,411.0 L602.0,424.0 L609.0,445.0 L611.0,443.0 L613.0,435.0 L618.0,425.0 L616.0,417.0 L609.0,403.0 L596.0,393.0 Z"/>
+    <path id="fragmentos-roxos-07" data-name="particula" d="M630.0,266.0 L630.0,280.0 L674.0,294.0 L676.0,290.0 L676.0,285.0 L672.0,278.0 L643.0,268.0 Z"/>
+    <path id="fragmentos-roxos-08" data-name="particula" d="M608.0,371.0 L609.0,376.0 L616.0,380.0 L622.0,381.0 L628.0,378.0 L628.0,373.0 L626.0,369.0 L623.0,367.0 L613.0,366.0 Z"/>
+    <path id="fragmentos-roxos-09" data-name="particula" d="M493.0,433.0 L486.0,433.0 L477.0,440.0 L478.0,449.0 L484.0,449.0 L492.0,444.0 L494.0,440.0 Z"/>
+    <path id="fragmentos-roxos-10" data-name="particula" d="M775.0,259.0 L768.0,259.0 L760.0,265.0 L759.0,271.0 L762.0,275.0 L765.0,275.0 L773.0,271.0 L776.0,264.0 Z"/>
+    <path id="fragmentos-roxos-11" data-name="particula" d="M149.0,254.0 L147.0,257.0 L148.0,262.0 L156.0,268.0 L161.0,268.0 L163.0,264.0 L162.0,259.0 L156.0,253.0 Z"/>
+    <path id="fragmentos-roxos-12" data-name="particula" d="M363.0,115.0 L363.0,120.0 L367.0,124.0 L371.0,126.0 L378.0,126.0 L379.0,120.0 L375.0,114.0 L372.0,112.0 L366.0,112.0 Z"/>
+    <path id="fragmentos-roxos-13" data-name="particula" d="M546.0,410.0 L542.0,415.0 L543.0,420.0 L553.0,421.0 L557.0,412.0 L554.0,410.0 Z"/>
+    <path id="fragmentos-roxos-14" data-name="particula" d="M345.0,398.0 L342.0,401.0 L342.0,405.0 L345.0,410.0 L349.0,410.0 L352.0,406.0 L351.0,399.0 Z"/>
+    <path id="fragmentos-roxos-15" data-name="particula" d="M277.0,284.0 L276.0,287.0 L277.0,291.0 L280.0,294.0 L286.0,294.0 L287.0,292.0 L286.0,286.0 L283.0,283.0 Z"/>
+    <path id="fragmentos-roxos-16" data-name="particula" d="M543.0,388.0 L540.0,394.0 L544.0,399.0 L547.0,399.0 L551.0,395.0 L550.0,389.0 Z"/>
+    <path id="fragmentos-roxos-17" data-name="particula" d="M244.0,406.0 L244.0,409.0 L248.0,412.0 L254.0,412.0 L257.0,410.0 L257.0,407.0 L252.0,403.0 L246.0,404.0 Z"/>
+    <path id="fragmentos-roxos-18" data-name="particula" d="M667.0,405.0 L670.0,408.0 L679.0,407.0 L679.0,402.0 L674.0,399.0 L668.0,401.0 Z"/>
+    <path id="fragmentos-roxos-19" data-name="particula" d="M682.0,309.0 L680.0,315.0 L683.0,319.0 L688.0,319.0 L690.0,316.0 L689.0,311.0 L687.0,309.0 Z"/>
+    <path id="fragmentos-roxos-20" data-name="particula" d="M329.0,143.0 L327.0,149.0 L330.0,153.0 L334.0,153.0 L336.0,151.0 L336.0,146.0 L333.0,143.0 Z"/>
+    <path id="fragmentos-roxos-21" data-name="particula" d="M190.0,130.0 L188.0,132.0 L188.0,135.0 L191.0,139.0 L194.0,139.0 L196.0,137.0 L196.0,133.0 L194.0,130.0 Z"/>
+    <path id="fragmentos-roxos-22" data-name="particula" d="M165.0,232.0 L163.0,234.0 L163.0,238.0 L165.0,241.0 L169.0,241.0 L171.0,238.0 L170.0,234.0 L168.0,232.0 Z"/>
+    <path id="fragmentos-roxos-23" data-name="particula" d="M275.0,224.0 L276.0,229.0 L281.0,230.0 L283.0,227.0 L282.0,224.0 L280.0,222.0 Z"/>
+    <path id="fragmentos-roxos-24" data-name="particula" d="M178.0,175.0 L177.0,180.0 L183.0,181.0 L184.0,177.0 L182.0,175.0 Z"/>
+    <path id="fragmentos-roxos-25" data-name="particula" d="M217.0,265.0 L214.0,266.0 L215.0,272.0 L220.0,271.0 L220.0,267.0 Z"/>
+    <path id="fragmentos-roxos-26" data-name="particula" d="M641.0,385.0 L639.0,387.0 L639.0,390.0 L643.0,392.0 L645.0,391.0 L645.0,386.0 Z"/>
+    <path id="fragmentos-roxos-27" data-name="particula" d="M286.0,317.0 L285.0,321.0 L287.0,323.0 L290.0,323.0 L291.0,318.0 Z"/>
+  </g>
+</svg>
