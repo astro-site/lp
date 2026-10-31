@@ -1429,3 +1429,44 @@ footer {
     }
 
 }
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  .secao-cta, .imagem-principal { display: none; }
+
+  .principal {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .conteudo-principal {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .principal h1 {
+    font-size: clamp(42px, 5.5vw, 64px);
+  }
+
+  .principal p br { display: none; }
+
+  .missao, .contato {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .valores, .canais { width: 100%; }
+
+  .conteudo-rodape {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .links-rodape {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
