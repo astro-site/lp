@@ -1692,3 +1692,12 @@ footer {
 @media (min-width: 3200px) {
   main, footer { zoom: 1.75; }
 }
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  .links-navegacao {
+    flex: 1;
+    margin: 0 clamp(8px, 2vw, 30px);
+    justify-content: space-evenly;
+    gap: 8px;
+  }
+}
