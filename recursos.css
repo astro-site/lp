@@ -1560,11 +1560,18 @@ footer {
   .imagem-principal, .secao-cta { display: none; }
 
   /* PRINCIPAL */
-  .principal {
-    justify-content: center;
-    text-align: center;
-    gap: 26px;
-  }
+.principal {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 20px;
+  justify-items: center;
+  text-align: center;
+}
+
+.principal .conteudo-principal {
+  grid-column: 1 / -1;
+  width: 100%;
+}
 
   .conteudo-principal {
     max-width: 850px;

@@ -1549,13 +1549,21 @@ footer {
     align-items: stretch;
   }
 
-  .o-plano, .o-plano2 {
-    width: 100%;
-    height: auto;
-    min-height: 720px;
-    padding: 28px;
-    margin: 0 !important;
-  }
+.o-plano, .o-plano2 {
+  width: 100%;
+  height: auto;
+  min-height: 720px;
+  padding: 28px;
+  margin: 0 !important;
+}
+
+.o-plano2 {
+  padding-top: 0;
+}
+
+.mais-escolhido {
+  margin-top: 0;
+}
 
   .plano-titulo, .plano-titulo2 {
     margin: 20px 0 24px;
@@ -1589,7 +1597,7 @@ footer {
     padding: 15px 10px;
     font-size: 17px;
   }
-
+  
   .topicos { margin: 32px 0 0; }
   .topico { margin-bottom: 24px; }
   .topico p {
@@ -1661,6 +1669,19 @@ footer {
   }
 
   .links-rodape .social { grid-column: auto; }
+
+  .economize {
+  display: grid;
+  place-items: center;
+  margin: 15px 18px 0 0;
+}
+
+.economize p {
+  margin: 0;
+  line-height: 1;
+  font-size: 10px;
+}
+
 }
 
 /* TVs */

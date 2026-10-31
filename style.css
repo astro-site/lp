@@ -1355,17 +1355,26 @@ footer { padding: 80px 120px 32px; }
 
   .como-funciona { margin-bottom: 0; }
 
-  .conteudo-rodape {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+.conteudo-rodape {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 40px 24px;
+}
 
-  .links-rodape {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 24px;
-  }
+.marca-rodape {
+  grid-column: 1 / -1;
+}
+
+.links-rodape {
+  display: contents;
+}
+
+.conteudo-rodape > .social {
+  grid-column: 5;
+}
+.links-rodape .coluna-links {
+  min-width: 0;
+}
 }
 
 @media (min-width: 700px) and (max-width: 1200px) {
@@ -1377,12 +1386,14 @@ footer { padding: 80px 120px 32px; }
 }
 
 @media (min-width: 561px) and (max-width: 800px) {
-  .links-rodape {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 32px 20px;
-  }
+.links-rodape {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 20px;
+}
 
-  .links-rodape .social { grid-column: auto; }
+.links-rodape .social {
+  grid-column: auto;
+}
 }
 
 @media (min-width: 801px) and (max-width: 1200px) {

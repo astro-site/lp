@@ -1366,17 +1366,23 @@ footer {
   .linha-vertical { display: none; }
   .seguranca { margin-bottom: 0; }
 
-  .conteudo-rodape {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+.conteudo-rodape {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 40px 24px;
+}
 
-  .links-rodape {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 24px;
-  }
+.marca-rodape {
+  grid-column: 1 / -1;
+}
+
+.links-rodape {
+  display: contents;
+}
+
+.conteudo-rodape > .social {
+  grid-column: 5;
+}
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
